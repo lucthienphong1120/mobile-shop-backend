@@ -15,3 +15,8 @@ protected $database = 'mobileshop';
 
 ## Demo static page
 
+https://www.ltp110.tk/mobile-shop-database/index.html
+
+https://www.ltp110.tk/mobile-shop-database/cart.html
+
+https://www.ltp110.tk/mobile-shop-database/product.html
