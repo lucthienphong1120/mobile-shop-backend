@@ -6,9 +6,12 @@ In this complete E-commerce Website, We will take a look at how to create Mobile
 
 Goto [/database/DBController.php line 7](https://github.com/lucthienphong1120/mobile-shop-database/blob/main/database/DBController.php#L7), change the follow code:
 
-```
+```php
 protected $host = 'localhost';
 protected $user = 'root';
 protected $password = '';
 protected $database = 'mobileshop';
 ```
+
+## Demo static page
+
