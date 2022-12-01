@@ -28,8 +28,7 @@
 
 <!-- start #header -->
 <header id="header">
-    <div class="strip d-flex justify-content-between px-4 py-1 bg-light">
-        <p class="font-rale font-size-12 text-black-50 m-0">OpenSource is free <a href="https://github.com/lucthienphong1120/mobile-shop-database">here</a></p>
+    <div class="strip d-flex justify-content-end px-4 py-1 bg-light">
         <div class="font-rale font-size-14">
             <a href="#" class="px-3 border-right border-left text-dark">Login</a>
             <a href="./cart.php" class="px-3 border-right text-dark">Whishlist (0)</a>
