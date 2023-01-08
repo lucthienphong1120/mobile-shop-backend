@@ -86,7 +86,7 @@ $(document).ready(function(){
         // change product price using ajax call
         $.ajax({url: "template/ajax.php", type : 'post', data : { itemid : $(this).data("id")}, success: function(result){
                 let obj = JSON.parse(result);
-                let item_price = obj[0]['item_price'];
+                let price = obj[0]['price'];
 
                 if($input.val() >= 1 && $input.val() <= 9){
                     $input.val(function(i, oldval){
@@ -94,10 +94,10 @@ $(document).ready(function(){
                     });
 
                     // increase price of the product
-                    $price.text(parseInt(item_price * $input.val()).toFixed(2));
+                    $price.text(parseInt(price * $input.val()).toFixed(2));
 
                     // set subtotal price
-                    let subtotal = parseInt($deal_price.text()) + parseInt(item_price);
+                    let subtotal = parseInt($deal_price.text()) + parseInt(price);
                     $deal_price.text(subtotal.toFixed(2));
                 }
 
@@ -113,7 +113,7 @@ $(document).ready(function(){
         // change product price using ajax call
         $.ajax({url: "template/ajax.php", type : 'post', data : { itemid : $(this).data("id")}, success: function(result){
                 let obj = JSON.parse(result);
-                let item_price = obj[0]['item_price'];
+                let price = obj[0]['price'];
 
                 if($input.val() > 1 && $input.val() <= 10){
                     $input.val(function(i, oldval){
@@ -122,10 +122,10 @@ $(document).ready(function(){
 
 
                     // increase price of the product
-                    $price.text(parseInt(item_price * $input.val()).toFixed(2));
+                    $price.text(parseInt(price * $input.val()).toFixed(2));
 
                     // set subtotal price
-                    let subtotal = parseInt($deal_price.text()) - parseInt(item_price);
+                    let subtotal = parseInt($deal_price.text()) - parseInt(price);
                     $deal_price.text(subtotal.toFixed(2));
                 }
 

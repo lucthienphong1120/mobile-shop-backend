@@ -1,6 +1,5 @@
 <?php
 
-
 class DBController
 {
     // Database Connection Properties
@@ -17,7 +16,7 @@ class DBController
     {
         $this->con = mysqli_connect($this->host, $this->user, $this->password, $this->database);
         if ($this->con->connect_error){
-            echo "Fail " . $this->con->connect_error;
+            echo "Fail to connect! " . $this->con->connect_error;
         }
     }
 
@@ -34,3 +33,5 @@ class DBController
         }
     }
 }
+
+?>

@@ -7,16 +7,8 @@ button, button:focus {
 }
 
 /* typography classes */
-.font-baloo {
-    font-family: "Baloo Thambi 2", cursive;
-}
-
-.font-rale {
-    font-family: "Raleway", cursive;
-}
-
-.font-rubik {
-    font-family: "Rubik", cursive;
+body {
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .font-size-12 {
@@ -45,19 +37,19 @@ button, button:focus {
 }
 
 .color-second {
-    color: #0e8bf1;
+    color: #8224e3;
 }
 
 .color-second-bg {
-    background: #0e8bf1;
+    background: #151517;
 }
 
 .color-yellow {
-    color: #FFD289;
+    color: #f9bf08;
 }
 
 .color-yellow-bg {
-    background: #FFD289;
+    background: #f9bf08;
 }
 
 /*  top sale template   */
@@ -100,4 +92,49 @@ button, button:focus {
     margin-top: 1rem;
 }
 
-/*# sourceMappingURL=style.css.map */
+/* additional css */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.topnav {
+    background-color: #f5f5f5;
+}
+
+.scroll-up {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.scroll-up i {
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    margin: 0px 10px;
+}
+
+.card-title {
+    height: 30px;
+}
+
+.card-text {
+    display: block;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
