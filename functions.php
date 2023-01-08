@@ -1,13 +1,13 @@
 <?php
 
 // require MySQL Connection
-require('database/DBConnect.php');
+require('function/DBConnect.php');
 
 // require Product Class
-require('database/Product.php');
+require('function/Product.php');
 
 // require Cart Class
-require('database/Cart.php');
+require('function/Cart.php');
 
 
 // DBController object

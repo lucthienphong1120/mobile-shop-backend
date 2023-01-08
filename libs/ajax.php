@@ -1,10 +1,10 @@
 <?php
 
 // require MySQL Connection
-require('./database/DBConnect.php');
+require('function/DBConnect.php');
 
 // require Product Class
-require('./database/Product.php');
+require('function/Product.php');
 
 // DBController object
 $db = new DBController();
