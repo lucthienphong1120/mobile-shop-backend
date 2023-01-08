@@ -56,8 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                                         <input type="hidden" value="<?php echo $item['id'] ?? 0; ?>" name="id">
                                         <button type="submit" name="cart-submit" class="btn  text-danger">Add to Cart</button>
                                     </form>
-
-
+                                    
                                 </div>
                                 <!-- !product qty -->
 

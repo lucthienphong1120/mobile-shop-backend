@@ -4,7 +4,7 @@ In this complete E-commerce Website, We will take a look at how to create Mobile
 
 ## Setup database
 
-Goto [/database/DBController.php line 7](https://github.com/lucthienphong1120/mobile-shop-backend/blob/main/database/DBController.php#L7), change the follow code:
+Goto [/database/DBConnect.php line 7](https://github.com/lucthienphong1120/mobile-shop-backend/blob/main/database/DBConnect.php#L7), change the follow code:
 
 ```php
 protected $host = 'localhost';
@@ -27,6 +27,6 @@ Make sure you have installed xampp and turned on apache and mysql
 
 Clone the repository into C:/xampp/htdocs/
 
-Change the configuration at /database/DBController.php
+Change the configuration at /database/DBConnect.php
 
 Open your browser at `http://localhost:<port>/<repository_name>/index.php`

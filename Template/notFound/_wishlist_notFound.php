@@ -14,7 +14,7 @@
                         <p class=" font-size-16 text-black-50">Empty Wishlist</p>
                     </div>
                 </div>
-                <!-- .Empty Cart -->
+                <!-- !Empty Cart -->
             </div>
         </div>
         <!--  !shopping cart items   -->

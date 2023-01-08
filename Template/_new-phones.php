@@ -39,7 +39,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                                 <?php
                                 if (in_array($item['id'], $Cart->getCartId($product->getData('cart')) ?? [])){
                                     echo '<button type="submit" disabled class="btn btn-success font-size-12">In the Cart</button>';
-                                }else{
+                                }
+                                else{
                                     echo '<button type="submit" name="top_sale_submit" class="btn btn-warning font-size-12">Add to Cart</button>';
                                 }
                                 ?>

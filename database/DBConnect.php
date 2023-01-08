@@ -15,7 +15,7 @@ class DBController
     public function __construct()
     {
         $this->con = mysqli_connect($this->host, $this->user, $this->password, $this->database);
-        if ($this->con->connect_error){
+        if ($this->con->connect_error) {
             echo "Fail to connect! " . $this->con->connect_error;
         }
     }
@@ -26,8 +26,9 @@ class DBController
     }
 
     // for mysqli closing connection
-    protected function closeConnection(){
-        if ($this->con != null ){
+    protected function closeConnection()
+    {
+        if ($this->con != null) {
             $this->con->close();
             $this->con = null;
         }

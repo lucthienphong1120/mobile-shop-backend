@@ -1,4 +1,5 @@
 <?php
+ob_start();
 // include header.php file
 include('header.php');
 ?>
@@ -6,11 +7,11 @@ include('header.php');
 <?php
 
 /*  include products */
-include('Template/_products.php');
+include('libs/_products.php');
 /*  include products */
 
 /*  include top sale section */
-include('Template/_top-sale.php');
+include('libs/_top-sale.php');
 /*  include top sale section */
 
 ?>

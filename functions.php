@@ -1,7 +1,7 @@
 <?php
 
 // require MySQL Connection
-require('database/DBController.php');
+require('database/DBConnect.php');
 
 // require Product Class
 require('database/Product.php');
