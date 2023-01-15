@@ -138,3 +138,7 @@ html {
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
+
+.form {
+    width: auto;
+}

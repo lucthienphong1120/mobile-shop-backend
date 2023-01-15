@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/phone.png" type="image/x-icon">
+    <title>Mobile Shop</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Owl-carousel CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha256-kksNxjDRxd/5+jGurZUJd1sdR2v+ClrCl3svESBaJqw=" crossorigin="anonymous" />
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="https://ltp110.tk/form-validate/css/style.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+
+        <!-- sign up -->
+        <form action="" method="POST" class="form" id="sign-up">
+            <h3 class="heading">Sign up</h3>
+            <p class="desc">Form validate user input for securing webapp</p>
+            <div class="row" style="width: 800px;">
+                <div class="col">
+
+                    <div class="spacer"></div>
+
+                    <div class="form-group">
+                        <label for="fullname" class="form-label">Tên đầy đủ</label>
+                        <input id="fullname" name="fullname" type="text" rules="required" placeholder="Nhập tên của bạn"
+                            class="form-control">
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input id="email" name="email" type="text" rules="required|email"
+                            placeholder="Nhập email đăng ký" class="form-control">
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">Mật khẩu</label>
+                        <input id="password" name="password" type="password" rules="required|min:6"
+                            placeholder="Nhập mật khẩu" class="form-control">
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+                        <input id="password_confirmation" name="password_confirmation"
+                            rules="required|confirm:#password" placeholder="Nhập lại mật khẩu" type="password"
+                            class="form-control">
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+                <div class="col">
+
+                    <div class="spacer"></div>
+
+                    <div class="form-group">
+                        <label for="avatar" class="form-label">Ảnh đại diện</label>
+                        <input id="avatar" name="avatar" type="file" rules="required" class="form-radio-control">
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="province" class="form-label">Thành phố</label>
+                        <select id="province" rules="required" name="province" class="form-control">
+                            <option value="">-- Chọn thành phố --</option>
+                            <option value="ha noi">Hà Nội</option>
+                            <option value="ho chi minh">Hồ Chí Minh</option>
+                            <option value="thanh hoa">Thanh Hóa</option>
+                            <option value="nghe an">Nghệ An</option>
+                            <option value="dong nai">Đồng Nai</option>
+                            <option value="binh duong">Bình Dương</option>
+                            <option value="hai phong">Hải Phòng</option>
+                            <option value="an giang">An Giang</option>
+                            <option value="hai duong">Hải Dương</option>
+                        </select>
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Giới tính</label>
+                        <div class="form-radio-control">
+                            <div><input name="gender" type="radio" rules="checkone:gender" value="nam"
+                                    class="form-radio">Nam
+                            </div>
+                            <div><input name="gender" type="radio" rules="checkone:gender" value="nu"
+                                    class="form-radio">Nữ
+                            </div>
+                            <div><input name="gender" type="radio" rules="checkone:gender" value="khac"
+                                    class="form-radio">Khác
+                            </div>
+                        </div>
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="form-submit">Sign up</button>
+        </form>
+
+    </div>
+
+    <!-- script js -->
+    <script src="https://ltp110.tk/form-validate/js/validator2.js"></script>
+    <script>
+        var signUpForm = new Validator('#sign-up');
+        signUpForm.onSubmit = function (data) {
+            console.log(data);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,18 +1,11 @@
 <!-- Special Price -->
 <?php
 $brand = array_map(function ($pro) {
-    return $pro['brand']; }, $product_shuffle);
+    return $pro['brand']; 
+}, $product_shuffle);
 $unique = array_unique($brand);
 sort($unique);
 shuffle($product_shuffle);
-
-// request method post
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    if (isset($_POST['special_price_submit'])) {
-        // call method addToCart
-        $Cart->addToCart($_POST['user_id'], $_POST['id']);
-    }
-}
 
 $in_cart = $Cart->getCartId($product->getData('cart'));
 
@@ -52,7 +45,7 @@ $in_cart = $Cart->getCartId($product->getData('cart'));
                                     <span>$<?php echo $item['price'] ?? 0 ?></span>
                                 </div>
                                 <form method="post">
-                                    <input type="hidden" name="id" value="<?php echo $item['id'] ?? '1'; ?>">
+                                    <input type="hidden" name="item_id" value="<?php echo $item['id'] ?? '1'; ?>">
                                     <input type="hidden" name="user_id" value="<?php echo 1; ?>">
                                     <?php
                                     if (in_array($item['id'], $in_cart ?? [])) {

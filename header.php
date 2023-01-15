@@ -40,8 +40,8 @@
     <header id="header">
         <div class="topnav d-flex justify-content-end px-4 py-1">
             <div class=" font-size-14">
-                <a href="#" class="px-3 border-right border-left text-dark">Login</a>
-                <a href="./cart.php#wishlist" class="px-3 border-right text-dark">Whishlist (0)</a>
+                <a href="./login.php" class="px-3 border-right border-left text-dark">Login</a>
+                <a href="./account.php" class="px-3 border-right text-dark">Account</a>
             </div>
         </div>
 
@@ -78,10 +78,11 @@
                     </li>
                 </ul>
                 <form action="#" class="font-size-14 ">
-                    <a href="cart.php#cart" class="py-2 rounded-pill color-primary-bg"
-                        style="padding: 12px 2px !important;">
+                    <a href="cart.php" class="py-2 rounded-pill color-primary-bg" style="padding: 12px 2px !important;">
                         <span class="font-size-16 px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
-                        <span class="px-3 py-2 rounded-pill text-dark bg-light"><?php echo count($product->getData('cart')); ?></span>
+                        <span class="px-3 py-2 rounded-pill text-dark bg-light">
+                            <?php echo count($product->getData('cart')); ?>
+                        </span>
                     </a>
                 </form>
             </div>

@@ -1,6 +1,6 @@
 <?php
 
-class DBController
+class Connect
 {
     // Database Connection Properties
     protected $host = 'localhost';

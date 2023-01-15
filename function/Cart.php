@@ -5,7 +5,7 @@ class Cart
 {
     public $db = null;
 
-    public function __construct(DBController $db)
+    public function __construct(Connect $db)
     {
         if (!isset($db->con))
             exit;
@@ -17,47 +17,50 @@ class Cart
     {
         if ($this->db->con != null) {
             if ($params != null) {
-                // "Insert into cart(user_id) values (0)"
+                // "Insert into cart(user_id, item_id) values (0)"
                 // get table columns
                 $columns = implode(',', array_keys($params));
 
                 $values = implode(',', array_values($params));
 
                 // create sql query
-                $query_string = sprintf("INSERT INTO %s(%s) VALUES(%s)", $table, $columns, $values);
+                $sql = sprintf("INSERT INTO %s(%s) VALUES(%s)", $table, $columns, $values);
 
                 // execute query
-                $result = $this->db->con->query($query_string);
+                $result = $this->db->con->query($sql);
                 return $result;
             }
         }
     }
 
-    // to get user_id and id and insert into cart table
+    // to get user_id and item_id and insert into cart table
     public function addToCart($userid, $itemid)
     {
         if (isset($userid) && isset($itemid)) {
             $params = array(
                 "user_id" => $userid,
-                "id" => $itemid
+                "item_id" => $itemid,
             );
 
             // insert data into cart
             $result = $this->insertIntoCart($params);
             if ($result) {
                 // Reload Page
-                header("Location: " . $_SERVER['PHP_SELF']);
+                header('Location: ' . $_SERVER['REQUEST_URI']);
+
             }
         }
     }
 
     // delete cart item using cart item id
-    public function deleteCart($id = null, $table = 'cart')
+    public function deleteCart($item_id = null, $table = 'cart')
     {
-        if ($id != null) {
-            $result = $this->db->con->query("DELETE FROM {$table} WHERE id={$id}");
+        if ($item_id != null) {
+            $sql = "DELETE FROM {$table} WHERE item_id={$item_id}";
+            $result = $this->db->con->query($sql);
             if ($result) {
-                header("Location:" . $_SERVER['PHP_SELF']);
+                // Reload Page
+                header('Location: ' . $_SERVER['REQUEST_URI']);
             }
             return $result;
         }
@@ -76,7 +79,7 @@ class Cart
     }
 
     // get item_it of shopping cart list
-    public function getCartId($cartArray = null, $key = "id")
+    public function getCartId($cartArray = null, $key = "item_id")
     {
         if ($cartArray != null) {
             $cart_id = array_map(function ($value) use ($key) {
@@ -85,23 +88,4 @@ class Cart
             return $cart_id;
         }
     }
-
-    // Save for later
-    public function saveForLater($id = null, $saveTable = "wishlist", $fromTable = "cart")
-    {
-        if ($id != null) {
-            $query = "INSERT INTO {$saveTable} SELECT * FROM {$fromTable} WHERE id={$id};";
-            $query .= "DELETE FROM {$fromTable} WHERE id={$id};";
-
-            // execute multiple query
-            $result = $this->db->con->multi_query($query);
-
-            if ($result) {
-                header("Location :" . $_SERVER['PHP_SELF']);
-            }
-            return $result;
-        }
-    }
-
-
 }

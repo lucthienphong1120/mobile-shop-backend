@@ -32,7 +32,6 @@ include('libs/_blogs.php');
 
 ?>
 
-
 <?php
 // include footer.php file
 include('footer.php');

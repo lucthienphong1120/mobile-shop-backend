@@ -35,7 +35,7 @@
                 <div class="d-flex flex-column flex-wrap">
                     <a href="#" class=" font-size-14 text-white-50 pb-1">My Account</a>
                     <a href="#" class=" font-size-14 text-white-50 pb-1">Order History</a>
-                    <a href="#" class=" font-size-14 text-white-50 pb-1">Wish List</a>
+                    <a href="#" class=" font-size-14 text-white-50 pb-1">Payment</a>
                     <a href="#" class=" font-size-14 text-white-50 pb-1">Newslatters</a>
                 </div>
             </div>

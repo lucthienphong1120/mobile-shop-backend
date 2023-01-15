@@ -5,7 +5,7 @@ class Product
 {
     public $db = null;
 
-    public function __construct(DBController $db)
+    public function __construct(Connect $db)
     {
         if (!isset($db->con))
             exit;
@@ -15,7 +15,8 @@ class Product
     // fetch product data using getData Method
     public function getData($table = 'product')
     {
-        $result = $this->db->con->query("SELECT * FROM {$table}");
+        $sql = "SELECT * FROM {$table}";
+        $result = $this->db->con->query($sql);
 
         $resultArray = array();
 
@@ -31,7 +32,8 @@ class Product
     public function getProduct($id = null, $table = 'product')
     {
         if ($id != null) {
-            $result = $this->db->con->query("SELECT * FROM {$table} WHERE id={$id}");
+            $sql = "SELECT * FROM {$table} WHERE id={$id}";
+            $result = $this->db->con->query($sql);
 
             $resultArray = array();
 
