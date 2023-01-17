@@ -6,12 +6,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-12">
-                <h4 class=" font-size-20">Mobile Shop</h4>
+                <h4 class="font-size-20">Mobile Shop</h4>
                 <p class="font-size-14  text-white-50">The mobile shop company website, create by php, mysql
                     database and bootstrap5.</p>
             </div>
             <div class="col-lg-4 col-12">
-                <h4 class=" font-size-20">Newslatter</h4>
+                <h4 class="font-size-20">Newslatter</h4>
                 <form>
                     <div class="col">
                         <input type="text" class="form-control" placeholder="Enter your email">
@@ -22,7 +22,7 @@
                 </form>
             </div>
             <div class="col-lg-2 col-12">
-                <h4 class=" font-size-20">Information</h4>
+                <h4 class="font-size-20">Information</h4>
                 <div class="d-flex flex-column flex-wrap">
                     <a href="#" class="font-size-14 text-white-50 pb-1">About Us</a>
                     <a href="#" class="font-size-14 text-white-50 pb-1">Delivery Information</a>
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-12">
-                <h4 class=" font-size-20">Account</h4>
+                <h4 class="font-size-20">Account</h4>
                 <div class="d-flex flex-column flex-wrap">
                     <a href="#" class="font-size-14 text-white-50 pb-1">My Account</a>
                     <a href="#" class="font-size-14 text-white-50 pb-1">Order History</a>

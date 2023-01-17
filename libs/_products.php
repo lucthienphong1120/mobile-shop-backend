@@ -9,16 +9,16 @@ foreach ($product->getData() as $item):
                 <div class="row">
                     <div class="col-sm-6">
                         <img src="<?php echo $item['image'] ?? "./assets/products/1.png" ?>" alt="product" class="img-fluid">
-                        <div class=" pt-4 font-size-16 ">
+                        <div class="pt-4 font-size-16">
                             <div class="col">
                                 <button type="submit" class="btn btn-danger form-control" onclick="alert('This is demo only')">Proceed to Buy</button>
                             </div>
                             <div class="col">
-                                <form method="post">
+                                <form method="POST">
                                     <input type="hidden" name="item_id" value="<?php echo $item['id'] ?? '1'; ?>">
                                     <input type="hidden" name="user_id" value="<?php echo 1; ?>">
                                     <?php
-                                    if (in_array($item['id'], $Cart->getCartId($product->getData('cart')) ?? [])) {
+                                    if (in_array($item['id'], $cart->getCartId($product->getData('cart')) ?? [])) {
                                         echo '<button type="submit" disabled class="btn btn-success form-control">In the Cart</button>';
                                     } else {
                                         echo '<button type="submit" name="buy_product_submit" class="btn btn-warning form-control">Add to Cart</button>';
@@ -29,7 +29,7 @@ foreach ($product->getData() as $item):
                         </div>
                     </div>
                     <div class="col-sm-6 py-5">
-                        <h5 class=" font-size-20"><?php echo $item['name'] ?? "Unknown"; ?></h5>
+                        <h5 class="font-size-20"><?php echo $item['name'] ?? "Unknown"; ?></h5>
                         <small>by <?php echo $item['brand'] ?? "Brand"; ?></small>
                         <div class="d-flex">
                             <div class="rating text-warning font-size-12">
@@ -65,30 +65,30 @@ foreach ($product->getData() as $item):
                         <!-- #policy -->
                         <div id="policy">
                             <div class="d-flex">
-                                <div class="return text-center mr-5">
+                                <div class="return text-center me-5">
                                     <div class="font-size-20 my-2 color-second">
                                         <span class="fas fa-retweet border p-3 rounded-pill"></span>
                                     </div>
-                                    <a href="#" class=" font-size-12">10 Days <br> Replacement</a>
+                                    <a href="#" class="font-size-12">10 Days <br> Replacement</a>
                                 </div>
-                                <div class="return text-center mr-5">
+                                <div class="return text-center me-5">
                                     <div class="font-size-20 my-2 color-second">
                                         <span class="fas fa-truck  border p-3 rounded-pill"></span>
                                     </div>
-                                    <a href="#" class=" font-size-12">About <br>Our</a>
+                                    <a href="#" class="font-size-12">About <br>Our</a>
                                 </div>
-                                <div class="return text-center mr-5">
+                                <div class="return text-center me-5">
                                     <div class="font-size-20 my-2 color-second">
                                         <span class="fas fa-check-double border p-3 rounded-pill"></span>
                                     </div>
-                                    <a href="#" class=" font-size-12">1 Year <br>Warranty</a>
+                                    <a href="#" class="font-size-12">1 Year <br>Warranty</a>
                                 </div>
                             </div>
                         </div>
                         <!-- !policy -->
                         <hr>
                         <!-- order-details -->
-                        <div id="order-details" class=" d-flex flex-column text-dark">
+                        <div id="order-details" class="d-flex flex-column text-dark">
                             <small>Delivery by : Mar 29 - Apr 1</small>
                             <small>Sold by <a href="#">Daily Electronics </a>(4.5 out of 5 | 18,198 ratings)</small>
                             <small><i class="fas fa-map-marker-alt color-primary"></i>&nbsp;&nbsp;Deliver to Customer -
@@ -118,7 +118,7 @@ foreach ($product->getData() as $item):
                                 <!-- product qty section -->
                                 <div class="qty d-flex">
                                     <h6>Quantity</h6>
-                                    <div class="px-4 d-flex ">
+                                    <div class="px-4 d-flex">
                                         <button class="qty-up border bg-light w-25" data-id="pro1"><i
                                                 class="fas fa-angle-up"></i></button>
                                         <input type="text" data-id="pro1" class="qty_input text-center border px-2 w-50 bg-light" disabled
@@ -134,13 +134,13 @@ foreach ($product->getData() as $item):
                         <div class="size my-3">
                             <h6>Size :</h6>
                             <div class="d-flex justify-content-between w-75">
-                                <div class=" border p-2">
+                                <div class="border p-2">
                                     <button class="btn p-0 font-size-14">4GB RAM</button>
                                 </div>
-                                <div class=" border p-2">
+                                <div class="border p-2">
                                     <button class="btn p-0 font-size-14">6GB RAM</button>
                                 </div>
-                                <div class=" border p-2">
+                                <div class="border p-2">
                                     <button class="btn p-0 font-size-14">8GB RAM</button>
                                 </div>
                             </div>

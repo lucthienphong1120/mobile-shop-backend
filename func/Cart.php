@@ -47,7 +47,8 @@ class Cart
             if ($result) {
                 // Reload Page
                 header('Location: ' . $_SERVER['REQUEST_URI']);
-
+            } else {
+                echo '<script>alert("Error")</script>';
             }
         }
     }
@@ -61,6 +62,8 @@ class Cart
             if ($result) {
                 // Reload Page
                 header('Location: ' . $_SERVER['REQUEST_URI']);
+            } else {
+                echo '<script>alert("Error")</script>';
             }
             return $result;
         }
@@ -69,22 +72,21 @@ class Cart
     // calculate sub total
     public function getSum($arr)
     {
-        if (isset($arr)) {
-            $sum = 0;
-            foreach ($arr as $item) {
-                $sum += floatval($item[0]);
-            }
-            return sprintf('%.2f', $sum);
+        $sum = 0;
+        foreach ($arr as $item) {
+            $sum += floatval($item);
         }
+        return sprintf('%.2f', $sum);
     }
 
-    // get item_it of shopping cart list
-    public function getCartId($cartArray = null, $key = "item_id")
+    // get item_id of shopping cart list
+    public function getCartId($cartArray = null)
     {
+        $cart_id = array();
         if ($cartArray != null) {
-            $cart_id = array_map(function ($value) use ($key) {
-                return $value[$key];
-            }, $cartArray);
+            foreach ($cartArray as $item) {
+                array_push($cart_id, $item['item_id']);
+            }
             return $cart_id;
         }
     }

@@ -42,7 +42,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav m-auto ">
+                <ul class="navbar-nav m-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="./index.html">Home</a>
                     </li>
@@ -65,11 +65,12 @@
                         <a class="nav-link" href="#">Coming Soon</a>
                     </li>
                 </ul>
-                <form action="#" class="font-size-14 ">
-                    <a href="./cart.html" class="py-2 rounded-pill color-primary-bg"
-                        style="padding: 12px 2px !important;">
-                        <span class="font-size-16 px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
-                        <span class="px-3 py-2 rounded-pill text-dark bg-light">0</span>
+                <form action="#" class="font-size-12">
+                    <a href="./cart.html" class="d-flex align-items-center rounded-pill color-primary-bg">
+                        <span class="font-size-14 px-2 py-2 text-white">
+                            <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                        </span>
+                        <span class="px-3 py-2 font-size-14 rounded-pill text-dark bg-light">0</span>
                     </a>
                 </form>
             </div>
@@ -81,21 +82,21 @@
     <main id="main-site">
         <div class="main">
             <!-- log in -->
-            <form action="" method="POST" class="form" id="sign-in">
+            <form method="POST" class="form" id="sign-in">
                 <h3 class="heading">Sign in</h3>
                 <p class="desc">Log in to enjoy exclusive offers for you!</p>
                 <div class="row" style="width: 400px;">
                     <div class="col">
                         <div class="form-group">
-                            <label for="account" class="form-label">Username</label>
-                            <input id="account" name="account" type="text" rules="required|min:3|max:10"
+                            <label for="username" class="form-label">Username</label>
+                            <input id="username" name="username" type="text" rules="required|min:3|max:10"
                                 placeholder="Nhập tên đăng nhập của bạn" class="form-control">
                             <span class="form-message"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="password" class="form-label">Password</label>
-                            <input id="password" name="password" type="password" rules="required|min:6"
+                            <input id="password" name="password" type="password" rules="required|min:3"
                                 placeholder="Nhập mật khẩu" class="form-control">
                             <span class="form-message"></span>
                         </div>
@@ -114,12 +115,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-12">
-                    <h4 class=" font-size-20">Mobile Shop</h4>
+                    <h4 class="font-size-20">Mobile Shop</h4>
                     <p class="font-size-14  text-white-50">Lorem ipsum dolor sit amet consectetur, adipisicing
                         elit. Repellendus, deserunt.</p>
                 </div>
                 <div class="col-lg-4 col-12">
-                    <h4 class=" font-size-20">Newslatter</h4>
+                    <h4 class="font-size-20">Newslatter</h4>
                     <form>
                         <div class="col">
                             <input type="text" class="form-control" placeholder="Enter your email">
@@ -130,7 +131,7 @@
                     </form>
                 </div>
                 <div class="col-lg-2 col-12">
-                    <h4 class=" font-size-20">Information</h4>
+                    <h4 class="font-size-20">Information</h4>
                     <div class="d-flex flex-column flex-wrap">
                         <a href="#" class="font-size-14 text-white-50 pb-1">About Us</a>
                         <a href="#" class="font-size-14 text-white-50 pb-1">Delivery Information</a>
@@ -139,7 +140,7 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-12">
-                    <h4 class=" font-size-20">Account</h4>
+                    <h4 class="font-size-20">Account</h4>
                     <div class="d-flex flex-column flex-wrap">
                         <a href="#" class="font-size-14 text-white-50 pb-1">My Account</a>
                         <a href="#" class="font-size-14 text-white-50 pb-1">Order History</a>

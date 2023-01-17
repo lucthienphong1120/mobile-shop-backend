@@ -7,13 +7,13 @@ $unique = array_unique($brand);
 sort($unique);
 shuffle($product_shuffle);
 
-$in_cart = $Cart->getCartId($product->getData('cart'));
+$in_cart = $cart->getCartId($product->getData('cart'));
 
 ?>
 <section id="special-price">
     <div class="container">
-        <h4 class=" font-size-20">Special Price</h4>
-        <div id="filters" class="button-group text-right  font-size-16">
+        <h4 class="font-size-20">Special Price</h4>
+        <div id="filters" class="button-group text-end  font-size-16">
             <button class="btn is-checked" data-filter="*">All Brand</button>
             <?php
             array_map(function ($brand) {
@@ -22,11 +22,11 @@ $in_cart = $Cart->getCartId($product->getData('cart'));
             ?>
         </div>
 
-        <div class="grid">
+        <div class="product-filter">
             <?php array_map(function ($item) use ($in_cart) { ?>
-                <div class="grid-item border <?php echo $item['brand'] ?? "Brand"; ?>">
+                <div class="product-filter-item border <?php echo $item['brand'] ?? "Brand"; ?>">
                     <div class="item py-2" style="width: 200px;">
-                        <div class="product ">
+                        <div class="product">
                             <a href="<?php printf('%s?id=%s', 'product.php', $item['id']); ?>"><img
                                     src="<?php echo $item['image'] ?? "./assets/products/13.png"; ?>" alt="product1"
                                     class="img-fluid"></a>
@@ -44,7 +44,7 @@ $in_cart = $Cart->getCartId($product->getData('cart'));
                                 <div class="price py-2">
                                     <span>$<?php echo $item['price'] ?? 0 ?></span>
                                 </div>
-                                <form method="post">
+                                <form method="POST">
                                     <input type="hidden" name="item_id" value="<?php echo $item['id'] ?? '1'; ?>">
                                     <input type="hidden" name="user_id" value="<?php echo 1; ?>">
                                     <?php

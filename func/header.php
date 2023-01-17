@@ -24,7 +24,7 @@
 
     <!-- form validate -->
     <link rel="stylesheet" href="https://ltp110.tk/form-validate/css/style.css">
-    
+
     <!-- Custom CSS file -->
     <link rel="stylesheet" href="./style.css">
 
@@ -56,7 +56,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav m-auto ">
+                <ul class="navbar-nav m-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="./index.php">Home</a>
                     </li>
@@ -79,10 +79,12 @@
                         <a class="nav-link" href="#">Coming Soon</a>
                     </li>
                 </ul>
-                <form action="#" class="font-size-14 ">
-                    <a href="cart.php" class="py-2 rounded-pill color-primary-bg" style="padding: 12px 2px !important;">
-                        <span class="font-size-16 px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
-                        <span class="px-3 py-2 rounded-pill text-dark bg-light">
+                <form action="#" class="font-size-12">
+                    <a href="./cart.php" class="d-flex align-items-center rounded-pill color-primary-bg">
+                        <span class="font-size-14 px-2 py-2 text-white">
+                            <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                        </span>
+                        <span class="px-3 py-2 font-size-14 rounded-pill text-dark bg-light">
                             <?php echo count($product->getData('cart')); ?>
                         </span>
                     </a>

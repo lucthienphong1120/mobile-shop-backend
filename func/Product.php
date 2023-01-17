@@ -21,8 +21,10 @@ class Product
         $resultArray = array();
 
         // fetch product data one by one
-        while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-            $resultArray[] = $item;
+        if ($result->num_rows > 0) {
+            while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                $resultArray[] = $item;
+            }
         }
 
         return $resultArray;
@@ -37,9 +39,9 @@ class Product
 
             $resultArray = array();
 
-            // fetch product data one by one
-            while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-                $resultArray[] = $item;
+            // fetch product data once
+            if ($result->num_rows == 1) {
+                $resultArray = mysqli_fetch_array($result, MYSQLI_ASSOC);
             }
 
             return $resultArray;

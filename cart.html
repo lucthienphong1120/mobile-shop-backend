@@ -44,7 +44,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav m-auto ">
+                <ul class="navbar-nav m-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="./index.html">Home</a>
                     </li>
@@ -67,11 +67,12 @@
                         <a class="nav-link" href="#">Coming Soon</a>
                     </li>
                 </ul>
-                <form action="#" class="font-size-14 ">
-                    <a href="./cart.html" class="py-2 rounded-pill color-primary-bg"
-                        style="padding: 12px 2px !important;">
-                        <span class="font-size-16 px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
-                        <span class="px-3 py-2 rounded-pill text-dark bg-light">0</span>
+                <form action="#" class="font-size-12">
+                    <a href="./cart.html" class="d-flex align-items-center rounded-pill color-primary-bg">
+                        <span class="font-size-14 px-2 py-2 text-white">
+                            <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                        </span>
+                        <span class="px-3 py-2 font-size-14 rounded-pill text-dark bg-light">0</span>
                     </a>
                 </form>
             </div>
@@ -83,9 +84,9 @@
     <main id="main-site">
         <!-- Shopping cart section  -->
         <section id="cart" class="py-3">
-            <div class="container w-75">
-                <h5 class=" font-size-20">Shopping Cart</h5>
-                <!--  shopping cart items   -->
+            <div class="container">
+                <h5 class="font-size-20">Shopping Cart</h5>
+                <!--  shopping cart items -->
                 <div class="row">
                     <div class="col-sm-9">
                         <!-- cart item -->
@@ -94,7 +95,7 @@
                                 <img src="./assets/products/1.png" style="height: 120px;" alt="cart1" class="img-fluid">
                             </div>
                             <div class="col-sm-8">
-                                <h5 class=" font-size-20">Samsung Galaxy 10</h5>
+                                <h5 class="font-size-20">Samsung Galaxy 10</h5>
                                 <small>by Samsung</small>
                                 <!-- product rating -->
                                 <div class="d-flex">
@@ -124,8 +125,8 @@
                                 </div>
                                 <!-- !product qty -->
                             </div>
-                            <div class="col-sm-2 text-right">
-                                <div class="font-size-20 text-danger "> $<span class="product_price">152</span>
+                            <div class="col-sm-2 text-end">
+                                <div class="font-size-20 text-danger"> $<span class="product_price">152</span>
                                 </div>
                             </div>
                         </div>
@@ -136,7 +137,7 @@
                                 <img src="./assets/products/2.png" style="height: 120px;" alt="cart1" class="img-fluid">
                             </div>
                             <div class="col-sm-8">
-                                <h5 class=" font-size-20">Samsung Galaxy 10</h5>
+                                <h5 class="font-size-20">Samsung Galaxy 10</h5>
                                 <small>by Samsung</small>
                                 <!-- product rating -->
                                 <div class="d-flex">
@@ -165,8 +166,8 @@
                                 </div>
                                 <!-- !product qty -->
                             </div>
-                            <div class="col-sm-2 text-right">
-                                <div class="font-size-20 text-danger "> $<span class="product_price">152</span>
+                            <div class="col-sm-2 text-end">
+                                <div class="font-size-20 text-danger"> $<span class="product_price">152</span>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +181,7 @@
                                 Your order is eligible for FREE Delivery.
                             </h6>
                             <div class="border-top py-4">
-                                <h5 class=" font-size-20">Subtotal (2 item):&nbsp; <span class="text-danger">$<span
+                                <h5 class="font-size-20">Subtotal (2 item):&nbsp; <span class="text-danger">$<span
                                             class="text-danger" id="deal-price">152.00</span>
                                     </span> </h5>
                                 <button type="submit" class="btn btn-warning mt-3"
@@ -190,19 +191,19 @@
                     </div>
                     <!-- !subtotal section-->
                 </div>
-                <!--  !shopping cart items   -->
+                <!-- !shopping cart items -->
             </div>
         </section>
         <!-- !Shopping cart section  -->
         <!-- New Phones -->
         <section id="new-phones">
             <div class="container py-5">
-                <h4 class=" font-size-20">New Phones</h4>
+                <h4 class="font-size-20">New Phones</h4>
                 <hr>
                 <!-- owl carousel -->
                 <div class="owl-carousel owl-theme">
                     <div class="item py-2 bg-light">
-                        <div class="product ">
+                        <div class="product">
                             <a href="#"><img src="./assets/products/1.png" alt="product1" class="img-fluid"></a>
                             <div class="text-center">
                                 <h6>Samsung Galaxy 10</h6>
@@ -221,7 +222,7 @@
                         </div>
                     </div>
                     <div class="item py-2 bg-light">
-                        <div class="product ">
+                        <div class="product">
                             <a href="#"><img src="./assets/products/2.png" alt="product1" class="img-fluid"></a>
                             <div class="text-center">
                                 <h6>Readme Note 7</h6>
@@ -240,7 +241,7 @@
                         </div>
                     </div>
                     <div class="item py-2 bg-light">
-                        <div class="product ">
+                        <div class="product">
                             <a href="#"><img src="./assets/products/3.png" alt="product1" class="img-fluid"></a>
                             <div class="text-center">
                                 <h6>Readme Note 7</h6>
@@ -259,7 +260,7 @@
                         </div>
                     </div>
                     <div class="item py-2 bg-light">
-                        <div class="product ">
+                        <div class="product">
                             <a href="#"><img src="./assets/products/6.png" alt="product1" class="img-fluid"></a>
                             <div class="text-center">
                                 <h6>Samsung Galaxy 10</h6>
@@ -278,7 +279,7 @@
                         </div>
                     </div>
                     <div class="item py-2 bg-light">
-                        <div class="product ">
+                        <div class="product">
                             <a href="#"><img src="./assets/products/1.png" alt="product1" class="img-fluid"></a>
                             <div class="text-center">
                                 <h6>Readme Note 7</h6>
@@ -297,7 +298,7 @@
                         </div>
                     </div>
                     <div class="item py-2 bg-light">
-                        <div class="product ">
+                        <div class="product">
                             <div class="d-flex flex-column">
                                 <a href="#"><img src="./assets/products/1.png" class="img-fluid" alt="pro1"></a>
                                 <div class="text-center">
@@ -318,7 +319,7 @@
                         </div>
                     </div>
                     <div class="item py-2 bg-light">
-                        <div class="product ">
+                        <div class="product">
                             <div class="d-flex flex-column">
                                 <a href="#"><img src="./assets/products/2.png" class="img-fluid" alt="pro1"></a>
                                 <div class="text-center">
@@ -350,12 +351,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-12">
-                    <h4 class=" font-size-20">Mobile Shop</h4>
+                    <h4 class="font-size-20">Mobile Shop</h4>
                     <p class="font-size-14  text-white-50">Lorem ipsum dolor sit amet consectetur, adipisicing
                         elit. Repellendus, deserunt.</p>
                 </div>
                 <div class="col-lg-4 col-12">
-                    <h4 class=" font-size-20">Newslatter</h4>
+                    <h4 class="font-size-20">Newslatter</h4>
                     <form>
                         <div class="col">
                             <input type="text" class="form-control" placeholder="Enter your email">
@@ -366,7 +367,7 @@
                     </form>
                 </div>
                 <div class="col-lg-2 col-12">
-                    <h4 class=" font-size-20">Information</h4>
+                    <h4 class="font-size-20">Information</h4>
                     <div class="d-flex flex-column flex-wrap">
                         <a href="#" class="font-size-14 text-white-50 pb-1">About Us</a>
                         <a href="#" class="font-size-14 text-white-50 pb-1">Delivery Information</a>
@@ -375,7 +376,7 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-12">
-                    <h4 class=" font-size-20">Account</h4>
+                    <h4 class="font-size-20">Account</h4>
                     <div class="d-flex flex-column flex-wrap">
                         <a href="#" class="font-size-14 text-white-50 pb-1">My Account</a>
                         <a href="#" class="font-size-14 text-white-50 pb-1">Order History</a>

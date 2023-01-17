@@ -19,7 +19,7 @@ include('func/footer.php');
 <script src="https://ltp110.tk/form-validate/js/validator2.js"></script>
 <script>
     var signUpForm = new Validator('#sign-in');
-    signUpForm.onSubmit = function (data) {
-        console.log(data);
-    }
+    // signUpForm.onSubmit = function (data) {
+    //     console.log(data);
+    // }
 </script>
