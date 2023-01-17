@@ -1,7 +1,7 @@
 <?php
 ob_start();
 // include header.php file
-include('header.php');
+include('func/header.php');
 ?>
 
 <?php
@@ -18,5 +18,5 @@ include('libs/_top-sale.php');
 
 <?php
 // include footer.php file
-include('footer.php');
+include('func/footer.php');
 ?>

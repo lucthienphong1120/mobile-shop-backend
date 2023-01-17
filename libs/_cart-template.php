@@ -37,12 +37,12 @@
                                 <!-- product qty -->
                                 <div class="qty d-flex pt-2">
                                     <div class="d-flex w-25">
-                                        <button class="qty-up border bg-light" data-id="<?php echo $item['id'] ?? '0'; ?>"><i
+                                        <button class="qty-up border bg-light w-25" data-id="<?php echo $item['id'] ?? '0'; ?>"><i
                                                 class="fas fa-angle-up"></i></button>
                                         <input type="text" data-id="<?php echo $item['id'] ?? '0'; ?>"
                                             class="qty_input text-center border px-2 w-100 bg-light" disabled value="1"
                                             placeholder="1">
-                                        <button data-id="<?php echo $item['id'] ?? '0'; ?>" class="qty-down border bg-light"><i
+                                        <button data-id="<?php echo $item['id'] ?? '0'; ?>" class="qty-down border bg-light w-25"><i
                                                 class="fas fa-angle-down"></i></button>
                                     </div>
 

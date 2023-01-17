@@ -9,8 +9,8 @@
     <title>Mobile Shop</title>
 
     <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!-- Owl-carousel CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -20,15 +20,17 @@
         integrity="sha256-kksNxjDRxd/5+jGurZUJd1sdR2v+ClrCl3svESBaJqw=" crossorigin="anonymous" />
 
     <!-- font awesome icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/7860568151.js" crossorigin="anonymous"></script>
 
+    <!-- form validate -->
+    <link rel="stylesheet" href="https://ltp110.tk/form-validate/css/style.css">
+    
     <!-- Custom CSS file -->
     <link rel="stylesheet" href="./style.css">
 
     <?php
     // require functions.php file
-    require('functions.php');
+    require('func/functions.php');
     ?>
 
 </head>
@@ -39,7 +41,7 @@
     <!-- start #header -->
     <header id="header">
         <div class="topnav d-flex justify-content-end px-4 py-1">
-            <div class=" font-size-14">
+            <div class="font-size-14">
                 <a href="./login.php" class="px-3 border-right border-left text-dark">Login</a>
                 <a href="./account.php" class="px-3 border-right text-dark">Account</a>
             </div>

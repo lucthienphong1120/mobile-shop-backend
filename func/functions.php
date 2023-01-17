@@ -1,13 +1,13 @@
 <?php
 
 // require MySQL Connection
-require('function/DBConnect.php');
+require('func/DBConnect.php');
 
 // require Product Class
-require('function/Product.php');
+require('func/Product.php');
 
 // require Cart Class
-require('function/Cart.php');
+require('func/Cart.php');
 
 // Connect object
 $db = new Connect();

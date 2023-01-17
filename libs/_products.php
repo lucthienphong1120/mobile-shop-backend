@@ -9,7 +9,7 @@ foreach ($product->getData() as $item):
                 <div class="row">
                     <div class="col-sm-6">
                         <img src="<?php echo $item['image'] ?? "./assets/products/1.png" ?>" alt="product" class="img-fluid">
-                        <div class="form-row pt-4 font-size-16 ">
+                        <div class=" pt-4 font-size-16 ">
                             <div class="col">
                                 <button type="submit" class="btn btn-danger form-control" onclick="alert('This is demo only')">Proceed to Buy</button>
                             </div>
@@ -43,19 +43,19 @@ foreach ($product->getData() as $item):
                         </div>
                         <hr class="m-0">
 
-                        <!---    product price       -->
+                        <!--- product price -->
                         <table class="my-3">
-                            <tr class=" font-size-14">
+                            <tr class="font-size-14">
                                 <td>M.R.P:</td>
                                 <td><strike>$162.00</strike></td>
                             </tr>
-                            <tr class=" font-size-14">
+                            <tr class="font-size-14">
                                 <td>Deal Price:</td>
                                 <td class="font-size-20 text-danger">$<span>
                                         <?php echo $item['price'] ?? 0; ?>
                                     </span><small class="text-dark font-size-12">&nbsp;&nbsp;Inclusive of all taxes</small></td>
                             </tr>
-                            <tr class=" font-size-14">
+                            <tr class="font-size-14">
                                 <td>You Save:</td>
                                 <td><span class="font-size-16 text-danger">$152.00</span></td>
                             </tr>
@@ -100,7 +100,7 @@ foreach ($product->getData() as $item):
                                 <!-- color -->
                                 <div class="color my-3">
                                     <div class="d-flex justify-content-between">
-                                        <h6 class="">Color:</h6>
+                                        <h6>Color:</h6>
                                         <div class="p-2 color-yellow-bg rounded-circle">
                                             <button class="btn font-size-14"></button>
                                         </div>
@@ -119,11 +119,11 @@ foreach ($product->getData() as $item):
                                 <div class="qty d-flex">
                                     <h6>Quantity</h6>
                                     <div class="px-4 d-flex ">
-                                        <button class="qty-up border bg-light" data-id="pro1"><i
+                                        <button class="qty-up border bg-light w-25" data-id="pro1"><i
                                                 class="fas fa-angle-up"></i></button>
                                         <input type="text" data-id="pro1" class="qty_input text-center border px-2 w-50 bg-light" disabled
                                             value="1" placeholder="1">
-                                        <button data-id="pro1" class="qty-down border bg-light"><i
+                                        <button data-id="pro1" class="qty-down border bg-light w-25"><i
                                                 class="fas fa-angle-down"></i></button>
                                     </div>
                                 </div>
@@ -132,7 +132,7 @@ foreach ($product->getData() as $item):
                         </div>
                         <!-- size -->
                         <div class="size my-3">
-                            <h6 class="">Size :</h6>
+                            <h6>Size :</h6>
                             <div class="d-flex justify-content-between w-75">
                                 <div class=" border p-2">
                                     <button class="btn p-0 font-size-14">4GB RAM</button>
