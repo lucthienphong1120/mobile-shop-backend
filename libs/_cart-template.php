@@ -14,14 +14,14 @@
                     <!-- cart item -->
                     <div class="row border-top py-3 mt-3">
                         <div class="col-sm-2">
-                            <img src="<?php echo $item['image'] ?? "./assets/products/1.png" ?>" style="height: 120px;"
+                            <img src="<?php echo $item['image']; ?>" style="height: 120px;"
                                 alt="cart1" class="img-fluid">
                         </div>
                         <div class="col-sm-8">
                             <h5 class="font-size-20">
-                                <?php echo $item['name'] ?? "Unknown"; ?>
+                                <?php echo $item['name']; ?>
                             </h5>
-                            <small>by <?php echo $item['brand'] ?? "Brand"; ?></small>
+                            <small>by <?php echo $manage->getBrand($item['brand'])['brand']; ?></small>
                             <!-- product rating -->
                             <div class="d-flex">
                                 <div class="rating text-warning font-size-12">

@@ -42,8 +42,9 @@
     <header id="header">
         <div class="topnav d-flex justify-content-end px-4 py-1">
             <div class="font-size-14">
-                <a href="./login.php" class="px-3 border-right border-left text-dark">Login</a>
-                <a href="./account.php" class="px-3 border-right text-dark">Account</a>
+                <a href="./login.php" class="px-3 border-start text-dark">Login</a>
+                <a href="./account.php" class="px-3 border-start text-dark">Account</a>
+                <a href="./manage.php" class="px-3 border-start text-dark">Manage</a>
             </div>
         </div>
 

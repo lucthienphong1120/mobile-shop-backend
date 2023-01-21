@@ -70,5 +70,20 @@ $(document).ready(function(){
         }
     })
 
+    // select all input type file
+    var imgInputs = $('input[type="file"][accept="image/*"]');
+    imgInputs.each(function(){
+        $(this).change(function(){
+            var img = $(this).get(0).files[0];
+            if(img){
+                var reader = new FileReader();
+                reader.onload = function(){
+                    $(this).parent().find('img').attr("src", reader.result);
+                }.bind(this);
+                reader.readAsDataURL(img);
+            }
+        });
+    });
+
 
 });

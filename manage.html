@@ -81,38 +81,65 @@
     <!-- !start #header -->
     <!-- start #main-site -->
     <main id="main-site">
-        <!-- start login -->
-        <section class="login">
-            <div class="main py-3">
-                <!-- log in -->
-                <form method="POST" class="form" id="sign-in">
-                    <h3 class="heading">Sign in</h3>
-                    <p class="desc">Log in to enjoy exclusive offers for you!</p>
-                    <div class="row" style="width: 400px;">
-                        <div class="col">
-                            <div class="form-group">
-                                <label for="username" class="form-label">Username (*)</label>
-                                <input id="username" name="username" type="text" rules="required|min:3|max:10"
-                                    placeholder="Nhập tên đăng nhập của bạn" class="form-control">
-                                <span class="form-message"></span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="password" class="form-label">Password (*)</label>
-                                <input id="password" name="password" type="password" rules="required|min:3"
-                                    placeholder="Nhập mật khẩu" class="form-control">
-                                <span class="form-message"></span>
-                            </div>
-                        </div>
+        <!-- start #manage -->
+        <section id="manage" class="py-3">
+            <div class="container">
+                <form method="POST" id="manage-product">
+                    <div class="form-group">
+                        <table class="table table-bordered table-data">
+                            <thead>
+                                <tr>
+                                    <th scope="colgroup rowgroup">ID</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Brand</th>
+                                    <th scope="col">Origin</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Image</th>
+                                    <th scope="col">Action</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-id="1">
+                                    <td>
+                                        <input type="number" value="1" readonly name="id-1">
+                                    </td>
+                                    <td>
+                                        <input type="text" value="Samsung Galaxy 10" name="name-1">
+                                    </td>
+                                    <td>
+                                        <select name="brand-1">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="Korean" disabled name="origin-1">
+                                    </td>
+                                    <td>
+                                        <input type="number" step="0.01" value="152.00" name="price-1">
+                                    </td>
+                                    <td>
+                                        <div class="preview-image">
+                                            <img src="./assets/products/1.png" alt="preview">
+                                            <input type="file" name="image-1" accept="image/*">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="manage.html?id=1" class="btn btn-warning">Update</a>
+                                    </td>
+                                    <td>
+                                        <a href="manage.html?id=1" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <span class="form-message"></span>
                     </div>
-
-                    <button class="form-submit" name="login-submit">Sign in</button>
-                    <p class="desc">Don't have an account? <a href="./register.html">Sign up</a></p>
                 </form>
-
             </div>
         </section>
-        <!-- !start login -->
+        <!-- !start #manage -->
     </main>
     <!-- !start #main-site -->
     <!-- start #footer -->
@@ -183,14 +210,6 @@
     <!-- Custom Javascript -->
     <script src="index.js"></script>
 
-    <!-- validate script -->
-    <script src="validate.js"></script>
-    <script>
-        var signInForm = new Validator('#sign-in');
-        signInForm.onSubmit = function (data) {
-            alert(JSON.stringify(data));
-        }
-    </script>
 </body>
 
 </html>

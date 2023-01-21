@@ -1,4 +1,4 @@
-<!--   product  -->
+<!-- start product -->
 <?php
 $id = $_GET['id'] ?? 1;
 foreach ($product->getData() as $item):
@@ -8,14 +8,14 @@ foreach ($product->getData() as $item):
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
-                        <img src="<?php echo $item['image'] ?? "./assets/products/1.png" ?>" alt="product" class="img-fluid">
+                        <img src="<?php echo $item['image']; ?>" alt="product" class="img-fluid">
                         <div class="pt-4 font-size-16">
                             <div class="col">
                                 <button type="submit" class="btn btn-danger form-control" onclick="alert('This is demo only')">Proceed to Buy</button>
                             </div>
                             <div class="col">
                                 <form method="POST">
-                                    <input type="hidden" name="item_id" value="<?php echo $item['id'] ?? '1'; ?>">
+                                    <input type="hidden" name="item_id" value="<?php echo $item['id']; ?>">
                                     <input type="hidden" name="user_id" value="<?php echo 1; ?>">
                                     <?php
                                     if (in_array($item['id'], $cart->getCartId($product->getData('cart')) ?? [])) {
@@ -29,8 +29,8 @@ foreach ($product->getData() as $item):
                         </div>
                     </div>
                     <div class="col-sm-6 py-5">
-                        <h5 class="font-size-20"><?php echo $item['name'] ?? "Unknown"; ?></h5>
-                        <small>by <?php echo $item['brand'] ?? "Brand"; ?></small>
+                        <h5 class="font-size-20"><?php echo $item['name']; ?></h5>
+                        <small>by <?php echo $manage->getBrand($item['brand'])['brand']; ?></small>
                         <div class="d-flex">
                             <div class="rating text-warning font-size-12">
                                 <span><i class="fas fa-star"></i></span>
@@ -166,7 +166,7 @@ foreach ($product->getData() as $item):
                 </div>
             </div>
         </section>
-        <!-- !product -->
+        <!-- !start product -->
         <?php
     endif;
 endforeach;

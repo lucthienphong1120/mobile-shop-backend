@@ -2,10 +2,10 @@
 <?php
 $brand = array_map(function ($pro) {
     return $pro['brand']; 
-}, $product_shuffle);
+}, $productData);
 $unique = array_unique($brand);
 sort($unique);
-shuffle($product_shuffle);
+shuffle($productData);
 
 $in_cart = $cart->getCartId($product->getData('cart'));
 
@@ -24,15 +24,15 @@ $in_cart = $cart->getCartId($product->getData('cart'));
 
         <div class="product-filter">
             <?php array_map(function ($item) use ($in_cart) { ?>
-                <div class="product-filter-item border <?php echo $item['brand'] ?? "Brand"; ?>">
+                <div class="product-filter-item border <?php echo $item['brand']; ?>">
                     <div class="item py-2" style="width: 200px;">
                         <div class="product">
                             <a href="<?php printf('%s?id=%s', 'product.php', $item['id']); ?>"><img
-                                    src="<?php echo $item['image'] ?? "./assets/products/13.png"; ?>" alt="product1"
+                                    src="<?php echo $item['image']; ?>" alt="product1"
                                     class="img-fluid"></a>
                             <div class="text-center">
                                 <h6>
-                                    <?php echo $item['name'] ?? "Unknown"; ?>
+                                    <?php echo $item['name']; ?>
                                 </h6>
                                 <div class="rating text-warning font-size-12">
                                     <span><i class="fas fa-star"></i></span>
@@ -45,7 +45,7 @@ $in_cart = $cart->getCartId($product->getData('cart'));
                                     <span>$<?php echo $item['price'] ?? 0 ?></span>
                                 </div>
                                 <form method="POST">
-                                    <input type="hidden" name="item_id" value="<?php echo $item['id'] ?? '1'; ?>">
+                                    <input type="hidden" name="item_id" value="<?php echo $item['id']; ?>">
                                     <input type="hidden" name="user_id" value="<?php echo 1; ?>">
                                     <?php
                                     if (in_array($item['id'], $in_cart ?? [])) {
@@ -59,7 +59,7 @@ $in_cart = $cart->getCartId($product->getData('cart'));
                         </div>
                     </div>
                 </div>
-            <?php }, $product_shuffle) ?>
+            <?php }, $productData) ?>
         </div>
     </div>
 </section>

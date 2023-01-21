@@ -6,7 +6,9 @@ include('func/header.php');
 
 <?php
 
+/*  include login form  */
 include('libs/_login-form.php')
+/*  include login form  */
 
 ?>
 
@@ -16,10 +18,10 @@ include('func/footer.php');
 ?>
 
 <!-- validate script -->
-<script src="https://ltp110.tk/form-validate/js/validator2.js"></script>
+<script src="validate.js"></script>
 <script>
-    var signUpForm = new Validator('#sign-in');
-    // signUpForm.onSubmit = function (data) {
-    //     console.log(data);
-    // }
+    var signInForm = new Validator('#sign-in');
+    signInForm.onSubmit = function (data) {
+        alert(JSON.stringify(data));
+    }
 </script>

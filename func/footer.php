@@ -17,7 +17,7 @@
                         <input type="text" class="form-control" placeholder="Enter your email">
                     </div>
                     <div class="col">
-                        <button type="submit" class="btn btn-primary mt-2">Subscribe</button>
+                        <button type="submit" class="btn btn-primary my-2">Subscribe</button>
                     </div>
                 </form>
             </div>

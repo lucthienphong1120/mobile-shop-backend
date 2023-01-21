@@ -1,6 +1,6 @@
 <!-- New Phones -->
 <?php
-shuffle($product_shuffle);
+shuffle($productData);
 ?>
 <section id="new-phones">
     <div class="container">
@@ -8,12 +8,12 @@ shuffle($product_shuffle);
         <hr>
         <!-- owl carousel -->
         <div class="owl-carousel owl-theme">
-            <?php foreach ($product_shuffle as $item) { ?>
-                <div class="item py-2 bg-light">
+            <?php foreach ($productData as $item) { ?>
+                <div class="item py-2 border rounded-2 bg-light">
                     <div class="product">
-                        <a href="<?php printf('%s?id=%s', 'product.php',  $item['id']); ?>"><img src="<?php echo $item['image'] ?? "./assets/products/1.png"; ?>" alt="product1" class="img-fluid"></a>
+                        <a href="<?php printf('%s?id=%s', 'product.php',  $item['id']); ?>"><img src="<?php echo $item['image']; ?>" alt="product1" class="img-fluid"></a>
                         <div class="text-center">
-                            <h6><?php echo  $item['name'] ?? "Unknown";  ?></h6>
+                            <h6><?php echo $item['name']; ?></h6>
                             <div class="rating text-warning font-size-12">
                                 <span><i class="fas fa-star"></i></span>
                                 <span><i class="fas fa-star"></i></span>
@@ -25,7 +25,7 @@ shuffle($product_shuffle);
                                 <span>$<?php echo $item['price'] ?? '0' ; ?></span>
                             </div>
                             <form method="POST">
-                                <input type="hidden" name="item_id" value="<?php echo $item['id'] ?? '1'; ?>">
+                                <input type="hidden" name="item_id" value="<?php echo $item['id']; ?>">
                                 <input type="hidden" name="user_id" value="<?php echo 1; ?>">
                                 <?php
                                 if (in_array($item['id'], $cart->getCartId($product->getData('cart')) ?? [])){

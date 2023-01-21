@@ -1,7 +1,7 @@
 <!-- Top Sale -->
 <?php
 
-shuffle($product_shuffle);
+shuffle($productData);
 
 ?>
 <section id="top-sale">
@@ -10,16 +10,16 @@ shuffle($product_shuffle);
         <hr>
         <!-- owl carousel -->
         <div class="owl-carousel owl-theme">
-            <?php foreach ($product_shuffle as $item) { ?>
-                <div class="item py-2">
+            <?php foreach ($productData as $item) { ?>
+                <div class="item py-2 border rounded-2 bg-light">
                     <div class="product">
                         <a href="<?php printf('%s?id=%s', 'product.php', $item['id']); ?>">
-                            <img src="<?php echo $item['image'] ?? "./assets/products/1.png"; ?>" alt="product1"
+                            <img src="<?php echo $item['image']; ?>" alt="product1"
                                 class="img-fluid">
                         </a>
                         <div class="text-center">
                             <h6>
-                                <?php echo $item['name'] ?? "Unknown"; ?>
+                                <?php echo $item['name']; ?>
                             </h6>
                             <div class="rating text-warning font-size-12">
                                 <span><i class="fas fa-star"></i></span>

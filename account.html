@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/phone.png" type="image/x-icon">
+    <title>Mobile Shop</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Owl-carousel CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha256-kksNxjDRxd/5+jGurZUJd1sdR2v+ClrCl3svESBaJqw=" crossorigin="anonymous" />
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/7860568151.js" crossorigin="anonymous"></script>
+    <!-- form validate -->
+    <link rel="stylesheet" href="https://ltp110.tk/form-validate/css/style.css">
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- start #header -->
+    <header id="header">
+        <div class="topnav d-flex justify-content-end px-4 py-1">
+            <div class="font-size-14">
+                <a href="./login.html" class="px-3 border-start text-dark">Login</a>
+                <a href="./account.html" class="px-3 border-start text-dark">Account</a>
+                <a href="./manage.html" class="px-3 border-start text-dark">Manage</a>
+            </div>
+        </div>
+        <!-- Primary Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark color-second-bg">
+            <img src="./assets/phone.png" class="logo">
+            <a class="navbar-brand" href="./index.html">Mobile Shop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#top-sale">Top sale</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#special-price">Special Price</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#new-phones">New Phones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#blogs">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./cart.html">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Coming Soon</a>
+                    </li>
+                </ul>
+                <form action="#" class="font-size-12">
+                    <a href="./cart.html" class="d-flex align-items-center rounded-pill color-primary-bg">
+                        <span class="font-size-14 px-2 py-2 text-white">
+                            <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                        </span>
+                        <span class="px-3 py-2 font-size-14 rounded-pill text-dark bg-light">0</span>
+                    </a>
+                </form>
+            </div>
+        </nav>
+        <!-- !Primary Navigation -->
+    </header>
+    <!-- !start #header -->
+    <!-- start #main-site -->
+    <main id="main-site">
+        <!-- start #account -->
+        <section id="account" class="py-3">
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-3">
+                        <!-- add member -->
+                        <form method="POST" class="form" id="add-member">
+                            <h3 class="heading">Add member</h3>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="username" class="form-label">Username (*)</label>
+                                        <input id="username" name="username" type="text" rules="required|min:3|max:10"
+                                            placeholder="Nhập tên đăng nhập của bạn" class="form-control">
+                                        <span class="form-message"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="password" class="form-label">Password (*)</label>
+                                        <input id="password" name="password" type="password" rules="required|min:3"
+                                            placeholder="Nhập mật khẩu" class="form-control">
+                                        <span class="form-message"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="privilege" class="form-label">Privilege (*)</label>
+                                        <select id="privilege" name="privilege" rules="required" class="form-control">
+                                            <option value="">-- Chọn đặc quyền --</option>
+                                            <option value="User">User</option>
+                                            <option value="Admin">Admin</option>
+                                        </select>
+                                        <span class="form-message"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="form-submit" name="add-member-submit">Add member</button>
+                        </form>
+                        <!-- !add member -->
+                    </div>
+                    <div class="col-9">
+                        <form method="POST" id="account-member">
+                            <div class="form-group">
+                                <table class="table table-striped table-bordered table-data">
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th scope="colgroup rowgroup">ID</th>
+                                            <th scope="col">Username</th>
+                                            <th scope="col">Password</th>
+                                            <th scope="col">Privilege</th>
+                                            <th scope="col">Action</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-id="1">
+                                            <td>
+                                                <input type="number" value="1" readonly name="id-1">
+                                            </td>
+                                            <td>
+                                                <input type="text" value="admin" rules="max:10" name="username-1"
+                                                    class="text-center">
+                                            </td>
+                                            <td>
+                                                <input type="text" value="admin" rules="max:10" name="password-1"
+                                                    class="text-center">
+                                            </td>
+                                            <td>
+                                                <select name="privilege-1">
+                                                    <option value="Admin">Admin</option>
+                                                    <option value="User">User</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <a href="account.html?id=1" class="btn btn-warning">Update</a>
+                                            </td>
+                                            <td>
+                                                <a href="account.html?id=1" class="btn btn-danger">Delete</a>
+                                            </td>
+                                        </tr>
+                                        <tr data-id="2">
+                                            <td>
+                                                <input type="number" value="2" readonly name="id-2">
+                                            </td>
+                                            <td>
+                                                <input type="text" value="david" rules="max:10" name="username-2"
+                                                    class="text-center">
+                                            </td>
+                                            <td>
+                                                <input type="text" value="test" rules="max:10" name="password-2"
+                                                    class="text-center">
+                                            </td>
+                                            <td>
+                                                <select name="privilege-2">
+                                                    <option value="User">User</option>
+                                                    <option value="Admin">Admin</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <a href="account.html?id=2" class="btn btn-warning">Update</a>
+                                            </td>
+                                            <td>
+                                                <a href="account.html?id=2" class="btn btn-danger">Delete</a>
+                                            </td>
+                                        </tr>
+                                        <tr data-id="3">
+                                            <td>
+                                                <input type="number" value="3" readonly name="id-3">
+                                            </td>
+                                            <td>
+                                                <input type="text" value="lenin" rules="max:10" name="username-3"
+                                                    class="text-center">
+                                            </td>
+                                            <td>
+                                                <input type="text" value="12345" rules="max:10" name="password-3"
+                                                    class="text-center">
+                                            </td>
+                                            <td>
+                                                <select name="privilege-3">
+                                                    <option value="User">User</option>
+                                                    <option value="Admin">Admin</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <a href="account.html?id=3" class="btn btn-warning">Update</a>
+                                            </td>
+                                            <td>
+                                                <a href="account.html?id=3" class="btn btn-danger">Delete</a>
+                                            </td>
+                                        </tr>
+                                        <tr data-id="4">
+                                            <td>
+                                                <input type="number" value="4" readonly name="id-4">
+                                            </td>
+                                            <td>
+                                                <input type="text" value="kevin" rules="max:10" name="username-4"
+                                                    class="text-center">
+                                            </td>
+                                            <td>
+                                                <input type="text" value="password" rules="max:10" name="password-4"
+                                                    class="text-center">
+                                            </td>
+                                            <td>
+                                                <select name="privilege-4">
+                                                    <option value="User">User</option>
+                                                    <option value="Admin">Admin</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <a href="account.html?id=4" class="btn btn-warning">Update</a>
+                                            </td>
+                                            <td>
+                                                <a href="account.html?id=4" class="btn btn-danger">Delete</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <span class="form-message"></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- !start #account -->
+    </main>
+    <!-- !start #main-site -->
+    <!-- start #footer -->
+    <footer id="footer" class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-12">
+                    <h4 class="font-size-20">Mobile Shop</h4>
+                    <p class="font-size-14  text-white-50">Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Repellendus, deserunt.</p>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h4 class="font-size-20">Newslatter</h4>
+                    <form>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Enter your email">
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary my-2">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-2 col-12">
+                    <h4 class="font-size-20">Information</h4>
+                    <div class="d-flex flex-column flex-wrap">
+                        <a href="#" class="font-size-14 text-white-50 pb-1">About Us</a>
+                        <a href="#" class="font-size-14 text-white-50 pb-1">Delivery Information</a>
+                        <a href="#" class="font-size-14 text-white-50 pb-1">Privacy Policy</a>
+                        <a href="#" class="font-size-14 text-white-50 pb-1">Terms & Conditions</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-12">
+                    <h4 class="font-size-20">Account</h4>
+                    <div class="d-flex flex-column flex-wrap">
+                        <a href="#" class="font-size-14 text-white-50 pb-1">My Account</a>
+                        <a href="#" class="font-size-14 text-white-50 pb-1">Order History</a>
+                        <a href="#" class="font-size-14 text-white-50 pb-1">Payment</a>
+                        <a href="#" class="font-size-14 text-white-50 pb-1">Newslatters</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright text-center bg-dark text-white py-2">
+        <p class="font-size-14">&copy; Copyrights 2022. Desing By <a
+                href="https://www.facebook.com/profile.php?id=100045406261491" class="color-second">LTP</a></p>
+    </div>
+    <!-- !start #footer -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- Owl Carousel Js file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
+
+    <!--  isotope plugin cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
+        integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+
+    <!-- Custom Javascript -->
+    <script src="index.js"></script>
+
+    <!-- validate script -->
+    <script src="validate.js"></script>
+    <script>
+        var addMemForm = new Validator('#add-member');
+        addMemForm.onSubmit = function (data) {
+            alert(JSON.stringify(data));
+        }
+        var accMemForm = new Validator('#account-member');
+        accMemForm.onSubmit = function (data) {
+            alert(JSON.stringify(data));
+        }
+    </script>
+</body>
+
+</html>
