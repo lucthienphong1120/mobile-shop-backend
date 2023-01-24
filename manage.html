@@ -82,7 +82,7 @@
     <!-- start #main-site -->
     <main id="main-site">
         <!-- start #manage -->
-        <section id="manage" class="py-3">
+        <section id="manage-product" class="py-3">
             <div class="container">
                 <form method="POST" id="manage-product">
                     <div class="form-group">
@@ -109,8 +109,11 @@
                                     </td>
                                     <td>
                                         <select name="brand-1">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
+                                            <option value="Samsung">Samsung</option>
+                                            <option value="Redmi">Redmi</option>
+                                            <option value="Apple">Apple</option>
+                                            <option value="Oppo">Oppo</option>
+                                            <option value="Nokia">Nokia</option>
                                         </select>
                                     </td>
                                     <td>
@@ -126,15 +129,17 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <a href="manage.html?id=1" class="btn btn-warning">Update</a>
+                                        <button type="submit" name="manage-update" formaction="manage.html?id=1"
+                                            class="btn btn-warning">Update</button>
                                     </td>
                                     <td>
-                                        <a href="manage.html?id=1" class="btn btn-danger">Delete</a>
+                                        <button type="submit" name="manage-delete" formaction="manage.html?id=1"
+                                            class="btn btn-danger">Delete</button>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
-                        <span class="form-message"></span>
+                        <button type="button" class="btn btn-secondary" onclick="alert('This is demo only');">Add Item</button>
                     </div>
                 </form>
             </div>

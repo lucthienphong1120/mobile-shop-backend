@@ -58,12 +58,10 @@
                                         <input type="number" value="1" readonly name="id-1">
                                     </td>
                                     <td>
-                                        <input type="text" value="admin" rules="max:10" name="username-1"
-                                            class="text-center">
+                                        <input type="text" value="admin" name="username-1" class="text-center">
                                     </td>
                                     <td>
-                                        <input type="text" value="admin" rules="max:10" name="password-1"
-                                            class="text-center">
+                                        <input type="text" value="admin" name="password-1" class="text-center">
                                     </td>
                                     <td>
                                         <select name="privilege-1">
@@ -83,12 +81,10 @@
                                         <input type="number" value="2" readonly name="id-2">
                                     </td>
                                     <td>
-                                        <input type="text" value="david" rules="max:10" name="username-2"
-                                            class="text-center">
+                                        <input type="text" value="david" name="username-2" class="text-center">
                                     </td>
                                     <td>
-                                        <input type="text" value="test" rules="max:10" name="password-2"
-                                            class="text-center">
+                                        <input type="text" value="test" name="password-2" class="text-center">
                                     </td>
                                     <td>
                                         <select name="privilege-2">
@@ -108,12 +104,10 @@
                                         <input type="number" value="3" readonly name="id-3">
                                     </td>
                                     <td>
-                                        <input type="text" value="lenin" rules="max:10" name="username-3"
-                                            class="text-center">
+                                        <input type="text" value="lenin" name="username-3" class="text-center">
                                     </td>
                                     <td>
-                                        <input type="text" value="12345" rules="max:10" name="password-3"
-                                            class="text-center">
+                                        <input type="text" value="12345" name="password-3" class="text-center">
                                     </td>
                                     <td>
                                         <select name="privilege-3">
@@ -133,12 +127,10 @@
                                         <input type="number" value="4" readonly name="id-4">
                                     </td>
                                     <td>
-                                        <input type="text" value="kevin" rules="max:10" name="username-4"
-                                            class="text-center">
+                                        <input type="text" value="kevin" name="username-4" class="text-center">
                                     </td>
                                     <td>
-                                        <input type="text" value="password" rules="max:10" name="password-4"
-                                            class="text-center">
+                                        <input type="text" value="password" name="password-4" class="text-center">
                                     </td>
                                     <td>
                                         <select name="privilege-4">
@@ -155,7 +147,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <span class="form-message"></span>
+                        <button type="button" class="btn btn-secondary addItem">Add Item</button>
                     </div>
                 </form>
             </div>

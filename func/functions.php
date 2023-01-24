@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['delete-cart-submit'])) {
         // call method deleteCart
-        $deletedrecord = $cart->deleteCart($_POST['item_id']);
+        $cart->deleteCart($_POST['item_id']);
     }
 }
 // request method post
@@ -84,15 +84,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 // request method post
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($_POST['login-submit'])) {
-        // call method addToCart
+        // call method login
         $acc->login($_POST['username'], $_POST['password']);
     }
 }
 // request method post
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($_POST['register-submit'])) {
-        echo "<script>alert('ok');</script>";
-        // call method addToCart
+        // call method register
         $acc->register(
             $_POST['fullname'],
             $_POST['username'],
@@ -104,8 +103,48 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $_POST['gender'],
             $_POST['address']
         );
-    } else {
-        echo "<script>alert('can't get data');</script>";
     }
 }
+// request method post
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    if (isset($_POST['manage-delete'])) {
+        if (isset($_GET['id'])) {
+            // call method deleteProduct
+            $manage->deleteProduct($_GET['id']);
+        } else {
+            echo "<script>alert('invalid id');</script>";
+        }
+    }
+}
+// request method post
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    if (isset($_POST['manage-update'])) {
+        if (isset($_GET['id'])) {
+            // call method updateProduct
+            $manage->updateProduct(
+                $_GET['id'],
+                $_POST['name-' . $_GET['id'] . ''],
+                $_POST['brand-' . $_GET['id'] . ''],
+                $_POST['price-' . $_GET['id'] . ''],
+                $_FILES['image-' . $_GET['id'] . ''],
+            );
+        } else {
+            echo "<script>alert('invalid id');</script>";
+        }
+    }
+}
+// request method post
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    if (isset($_POST['manage-insert'])) {
+        // call method insertProduct
+        $manage->insertProduct(
+            $_POST['name-' . $_GET['id'] . ''],
+            $_POST['brand-' . $_GET['id'] . ''],
+            $_POST['price-' . $_GET['id'] . ''],
+            $_FILES['image-' . $_GET['id'] . ''],
+        );
+    }
+}
+
+
 ?>

@@ -1,7 +1,7 @@
 <!-- start #manage -->
-<section id="manage" class="py-3">
+<section id="manage-product" class="py-3">
     <div class="container">
-        <form method="POST" id="manage-product">
+        <form method="POST" id="manage-product" enctype="multipart/form-data">
             <div class="form-group">
                 <table class="table table-bordered table-data">
                     <thead>
@@ -54,15 +54,20 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="manage.php?id=<?php echo $item['id'] ?>" class="btn btn-warning">Update</a>
+                                    <button type="submit" name="manage-update"
+                                        formaction="manage.php?id=<?php echo $item['id'] ?>"
+                                        class="btn btn-warning">Update</button>
                                 </td>
                                 <td>
-                                    <a href="manage.php?id=<?php echo $item['id'] ?>" class="btn btn-danger">Delete</a>
+                                    <button type="submit" name="manage-delete"
+                                        formaction="manage.php?id=<?php echo $item['id'] ?>"
+                                        class="btn btn-danger">Delete</button>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
+                <button type="button" class="btn btn-secondary addItem">Add Item</button>
             </div>
         </form>
     </div>

@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 14, 2023 at 08:20 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th1 24, 2023 lúc 05:46 PM
+-- Phiên bản máy phục vụ: 10.4.27-MariaDB
+-- Phiên bản PHP: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,60 +18,56 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `mobileshop`
+-- Cơ sở dữ liệu: `mobileshop`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `account`
+-- Cấu trúc bảng cho bảng `account`
 --
 
 CREATE TABLE `account` (
   `id` int(10) UNSIGNED NOT NULL,
   `username` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL
+  `password` varchar(30) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `privilege` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `account`
+-- Đang đổ dữ liệu cho bảng `account`
 --
 
-INSERT INTO `account` (`id`, `username`, `password`) VALUES
-(1, 'admin', 'admin'),
-(2, 'test', 'test'),
-(3, 'lenin', '123'),
-(4, 'kevin', '123');
+INSERT INTO `account` (`id`, `username`, `password`, `email`, `privilege`) VALUES
+(1, 'admin', 'admin', 'admin@gmail.com', 1),
+(2, 'david', 'test', 'david@gmail.com', 0),
+(3, 'lenin', '12345', 'lenin@gmail.com', 0),
+(4, 'kevin', 'password', 'kevin@gmail.com', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cart`
+-- Cấu trúc bảng cho bảng `cart`
 --
 
 CREATE TABLE `cart` (
+  `id` int(10) NOT NULL,
   `item_id` int(10) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `cart`
+-- Đang đổ dữ liệu cho bảng `cart`
 --
 
-INSERT INTO `cart` (`item_id`, `user_id`) VALUES
-(7, 1),
-(2, 1),
-(13, 1),
-(3, 1),
-(1, 1),
-(5, 1),
-(11, 1),
-(8, 1);
+INSERT INTO `cart` (`id`, `item_id`, `user_id`) VALUES
+(1, 9, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `manufacturer`
+-- Cấu trúc bảng cho bảng `manufacturer`
 --
 
 CREATE TABLE `manufacturer` (
@@ -82,7 +78,7 @@ CREATE TABLE `manufacturer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `manufacturer`
+-- Đang đổ dữ liệu cho bảng `manufacturer`
 --
 
 INSERT INTO `manufacturer` (`id`, `brand`, `company`, `headquarter`) VALUES
@@ -95,108 +91,124 @@ INSERT INTO `manufacturer` (`id`, `brand`, `company`, `headquarter`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product`
+-- Cấu trúc bảng cho bảng `product`
 --
 
 CREATE TABLE `product` (
   `id` int(10) UNSIGNED NOT NULL,
-  `brand` varchar(30) NOT NULL,
   `name` varchar(100) NOT NULL,
+  `brand` varchar(30) NOT NULL,
   `price` double(10,2) NOT NULL,
   `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `product`
+-- Đang đổ dữ liệu cho bảng `product`
 --
 
-INSERT INTO `product` (`id`, `brand`, `name`, `price`, `image`) VALUES
-(1, '1', 'Samsung Galaxy 10', 152.00, './assets/products/1.png'),
-(2, '2', 'Redmi Note 7', 122.00, './assets/products/2.png'),
-(3, '2', 'Redmi Note 6', 122.00, './assets/products/3.png'),
-(4, '2', 'Redmi Note 5', 122.00, './assets/products/4.png'),
-(5, '2', 'Redmi Note 4', 122.00, './assets/products/5.png'),
-(6, '2', 'Redmi Note 8', 122.00, './assets/products/6.png'),
-(7, '2', 'Redmi Note 9', 122.00, './assets/products/8.png'),
-(8, '2', 'Redmi Note', 122.00, './assets/products/10.png'),
-(9, '1', 'Samsung Galaxy S6', 152.00, './assets/products/11.png'),
-(10, '1', 'Samsung Galaxy S7', 152.00, './assets/products/12.png'),
-(11, '3', 'Apple iPhone 5', 152.00, './assets/products/13.png'),
-(12, '3', 'Apple iPhone 6', 152.00, './assets/products/14.png'),
-(13, '3', 'Apple iPhone 7', 152.00, './assets/products/15.png');
+INSERT INTO `product` (`id`, `name`, `brand`, `price`, `image`) VALUES
+(1, 'Samsung Galaxy 10', '1', 152.00, './assets/products/1.png'),
+(2, 'Redmi Note 7', '2', 122.00, './assets/products/2.png'),
+(3, 'Redmi Note 6', '2', 122.00, './assets/products/3.png'),
+(4, 'Redmi Note 5', '2', 122.00, './assets/products/4.png'),
+(5, 'Redmi Note 4', '2', 122.00, './assets/products/5.png'),
+(6, 'Redmi Note 8', '2', 122.00, './assets/products/6.png'),
+(7, 'Redmi Note 9', '2', 122.00, './assets/products/8.png'),
+(8, 'Redmi Note', '2', 122.00, './assets/products/10.png'),
+(9, 'Samsung Galaxy S6', '1', 152.00, './assets/products/11.png'),
+(10, 'Samsung Galaxy S7', '1', 152.00, './assets/products/12.png'),
+(11, 'Apple iPhone 5', '3', 152.00, './assets/products/13.png'),
+(12, 'Apple iPhone 6', '3', 152.00, './assets/products/14.png'),
+(13, 'Apple iPhone 7', '3', 152.00, './assets/products/15.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Cấu trúc bảng cho bảng `user`
 --
 
 CREATE TABLE `user` (
   `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(30) NOT NULL,
-  `money` double(10,2) UNSIGNED NOT NULL DEFAULT 0.00,
-  `privilege` tinyint(1) NOT NULL DEFAULT 0
+  `fullname` varchar(30) NOT NULL,
+  `phone` varchar(10) DEFAULT NULL,
+  `avatar` varchar(100) DEFAULT NULL,
+  `city` varchar(30) NOT NULL,
+  `gender` tinyint(3) NOT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `money` double(10,2) UNSIGNED NOT NULL DEFAULT 0.00
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `user`
+-- Đang đổ dữ liệu cho bảng `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `money`, `privilege`) VALUES
-(1, 'admin', 99999.99, 1),
-(2, 'test', 50.00, 0),
-(3, 'lenin', 100.00, 0),
-(4, 'kevin', 10.00, 0);
+INSERT INTO `user` (`id`, `fullname`, `phone`, `avatar`, `city`, `gender`, `address`, `money`) VALUES
+(1, 'admin', '0999912345', NULL, 'VN', 0, NULL, 99999.99),
+(2, 'david', '0828382237', NULL, 'US', 0, NULL, 50.00),
+(3, 'lenin', '0723923232', NULL, 'UK', 1, NULL, 100.00),
+(4, 'kevin', '0932733612', NULL, 'FR', 0, NULL, 10.00);
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `account`
+-- Chỉ mục cho bảng `account`
 --
 ALTER TABLE `account`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `manufacturer`
+-- Chỉ mục cho bảng `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `manufacturer`
 --
 ALTER TABLE `manufacturer`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `product`
+-- Chỉ mục cho bảng `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user`
+-- Chỉ mục cho bảng `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `account`
+-- AUTO_INCREMENT cho bảng `account`
 --
 ALTER TABLE `account`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `product`
+-- AUTO_INCREMENT cho bảng `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

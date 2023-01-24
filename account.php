@@ -24,8 +24,4 @@ include('func/footer.php');
     addMemForm.onSubmit = function (data) {
         alert(JSON.stringify(data));
     }
-    var accMemForm = new Validator('#account-member');
-    accMemForm.onSubmit = function (data) {
-        alert(JSON.stringify(data));
-    }
 </script>
