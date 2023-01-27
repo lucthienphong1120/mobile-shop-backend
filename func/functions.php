@@ -1,4 +1,11 @@
 <?php
+// start a session
+if (!isset($_SESSION)) {
+    session_start();
+}
+var_dump($_SESSION);
+echo "<br>";
+var_dump($_COOKIE);
 
 // require MySQL Connection
 require('func/DBConnect.php');
@@ -38,11 +45,14 @@ $brandData = $manage->getBrands();
 
 <?php
 // Notes left for administrator
-echo '<script>console.warn("Notes left for administrator!")</script>';
-echo '<script>console.warn(' . json_encode($accData) . ')</script>';
-
-echo '<script>console.warn(' . json_encode($manageData) . ')</script>';
-echo '<script>console.warn(' . json_encode($brandData) . ')</script>';
+echo '<script>console.clear()</script>';
+echo '<script>console.error("[Danger] Notes left for administrator only!")</script>';
+echo '<script>console.warn("Accounts:")</script>';
+echo '<script>console.log(' . json_encode($accData) . ')</script>';
+echo '<script>console.warn("Products:")</script>';
+echo '<script>console.log(' . json_encode($manageData) . ')</script>';
+echo '<script>console.warn("Brands:")</script>';
+echo '<script>console.log(' . json_encode($brandData) . ')</script>';
 ?>
 
 <?php
@@ -123,10 +133,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             // call method updateProduct
             $manage->updateProduct(
                 $_GET['id'],
-                $_POST['name-' . $_GET['id'] . ''],
-                $_POST['brand-' . $_GET['id'] . ''],
-                $_POST['price-' . $_GET['id'] . ''],
-                $_FILES['image-' . $_GET['id'] . ''],
+                $_POST['name-' . $_GET['id']],
+                $_POST['brand-' . $_GET['id']],
+                $_POST['price-' . $_GET['id']],
+                $_FILES['image-' . $_GET['id']],
             );
         } else {
             echo "<script>alert('invalid id');</script>";
@@ -138,10 +148,50 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($_POST['manage-insert'])) {
         // call method insertProduct
         $manage->insertProduct(
-            $_POST['name-' . $_GET['id'] . ''],
-            $_POST['brand-' . $_GET['id'] . ''],
-            $_POST['price-' . $_GET['id'] . ''],
-            $_FILES['image-' . $_GET['id'] . ''],
+            $_POST['name-' . $_GET['id']],
+            $_POST['brand-' . $_GET['id']],
+            $_POST['price-' . $_GET['id']],
+            $_FILES['image-' . $_GET['id']],
+        );
+    }
+}
+// request method post
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    if (isset($_POST['account-delete'])) {
+        if (isset($_GET['id'])) {
+            // call method deleteAcc
+            $acc->deleteAcc($_GET['id']);
+        } else {
+            echo "<script>alert('invalid id');</script>";
+        }
+    }
+}
+// request method post
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    if (isset($_POST['account-update'])) {
+        if (isset($_GET['id'])) {
+            // call method updateProduct
+            $acc->updateAcc(
+                $_GET['id'],
+                $_POST['username-' . $_GET['id']],
+                $_POST['password-' . $_GET['id']],
+                $_POST['email-' . $_GET['id']],
+                $_POST['privilege-' . $_GET['id']],
+            );
+        } else {
+            echo "<script>alert('invalid id');</script>";
+        }
+    }
+}
+// request method post
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    if (isset($_POST['account-insert'])) {
+        // call method insertAcc
+        $acc->insertAcc(
+            $_POST['username-' . $_GET['id']],
+            $_POST['password-' . $_GET['id']],
+            $_POST['email-' . $_GET['id']],
+            $_POST['privilege-' . $_GET['id']],
         );
     }
 }

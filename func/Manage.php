@@ -185,8 +185,7 @@ class Manage
                 }
                 return $result;
             }
-        }
-        else {
+        } else {
             echo '<script>alert("Please fill all fields!")</script>';
         }
     }

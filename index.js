@@ -88,19 +88,19 @@ $(document).ready(function () {
     // insert product row
     $manageProductTable = $("#manage-product .table-data");
     $manageProductTableBtn = $("#manage-product .btn.addItem");
+    $manageProductItems = $("#manage-product .table-data tr[data-id]").length;
     $manageProductTableBtn.on("click", function () {
-        $items = $("#manage-product .table-data tr[data-id]").length;
-        $items++;
+        $manageProductItems++;
         var html =
-            `<tr data-id="${$items}">
+            `<tr data-id="${$manageProductItems}">
                 <td>
-                    <input type="number" value="${$items}" readonly name="id-${$items}">
+                    <input type="number" value="${$manageProductItems}" readonly name="id-${$manageProductItems}">
                 </td>
                 <td>
-                    <input type="text" value="" name="name-${$items}">
+                    <input type="text" value="" name="name-${$manageProductItems}">
                 </td>
                 <td>
-                    <select name="brand-${$items}">
+                    <select name="brand-${$manageProductItems}">
                         <option value="1">Samsung</option>
                         <option value="2">Redmi</option>
                         <option value="3">Apple</option>
@@ -109,23 +109,23 @@ $(document).ready(function () {
                     </select>
                 </td>
                 <td>
-                    <input type="text" value="" disabled name="origin-${$items}">
+                    <input type="text" value="" disabled name="origin-${$manageProductItems}">
                 </td>
                 <td>
-                    <input type="number" step="0.01" value="0.00" name="price-${$items}">
+                    <input type="number" step="0.01" value="0.00" name="price-${$manageProductItems}">
                 </td>
                 <td>
                     <div class="preview-image">
                         <img src="#" alt="preview">
-                        <input type="file" name="image-${$items}" accept="image/*">
+                        <input type="file" name="image-${$manageProductItems}" accept="image/*">
                     </div>
                 </td>
                 <td>
-                    <button type="submit" name="manage-insert" formaction="manage.php?id=${$items}"
+                    <button type="submit" name="manage-insert" formaction="manage.php?id=${$manageProductItems}"
                         class="btn btn-success">Insert</button>
                 </td>
                 <td>
-                    <button type="submit" name="manage-delete" formaction="manage.php?id=${$items}"
+                    <button type="submit" name="manage-delete" formaction="manage.php?id=${$manageProductItems}"
                         class="btn btn-danger">Delete</button>
                 </td>
             </tr>`;
@@ -137,31 +137,33 @@ $(document).ready(function () {
     // insert product row
     $accMemberTable = $("#account-member .table-data");
     $accMemberTableBtn = $("#account-member .btn.addItem");
+    $accMemberItems = $("#account-member .table-data tr[data-id]").length;
     $accMemberTableBtn.on("click", function () {
-        $items = $("#account-member .table-data tr[data-id]").length;
-        $items++;
+        $accMemberItems++;
         var html =
-            `<tr data-id="${$items}">
+            `<tr data-id="${$accMemberItems}">
                 <td>
-                    <input type="number" value="${$items}" readonly name="id-${$items}">
+                    <input type="number" value="${$accMemberItems}" readonly name="id-${$accMemberItems}">
                 </td>
                 <td>
-                    <input type="text" value="" name="username-${$items}" class="text-center">
+                    <input type="text" value="" name="username-${$accMemberItems}" class="text-center">
                 </td>
                 <td>
-                    <input type="text" value="" name="password-${$items}" class="text-center">
+                    <input type="text" value="" name="password-${$accMemberItems}" class="text-center">
                 </td>
                 <td>
                     <select name="privilege-1">
-                        <option value="Admin">Admin</option>
-                        <option value="User">User</option>
+                        <option value="1">Admin</option>
+                        <option value="0" selected>User</option>
                     </select>
                 </td>
                 <td>
-                    <a href="account.php?id=${$items}" class="btn btn-success">Insert</a>
+                    <button type="submit" name="account-insert" formaction="account.php?id=${$accMemberItems}"
+                        class="btn btn-success">Insert</button>
                 </td>
                 <td>
-                    <a href="account.php?id=${$items}" class="btn btn-danger">Delete</a>
+                    <button type="submit" name="account-delete" formaction="account.php?id=${$accMemberItems}"
+                        class="btn btn-danger">Delete</button>
                 </td>
             </tr>`;
 

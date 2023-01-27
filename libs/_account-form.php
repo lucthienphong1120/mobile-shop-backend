@@ -53,98 +53,41 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr data-id="1">
-                                    <td>
-                                        <input type="number" value="1" readonly name="id-1">
-                                    </td>
-                                    <td>
-                                        <input type="text" value="admin" name="username-1" class="text-center">
-                                    </td>
-                                    <td>
-                                        <input type="text" value="admin" name="password-1" class="text-center">
-                                    </td>
-                                    <td>
-                                        <select name="privilege-1">
-                                            <option value="Admin">Admin</option>
-                                            <option value="User">User</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <a href="account.php?id=1" class="btn btn-warning">Update</a>
-                                    </td>
-                                    <td>
-                                        <a href="account.php?id=1" class="btn btn-danger">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr data-id="2">
-                                    <td>
-                                        <input type="number" value="2" readonly name="id-2">
-                                    </td>
-                                    <td>
-                                        <input type="text" value="david" name="username-2" class="text-center">
-                                    </td>
-                                    <td>
-                                        <input type="text" value="test" name="password-2" class="text-center">
-                                    </td>
-                                    <td>
-                                        <select name="privilege-2">
-                                            <option value="User">User</option>
-                                            <option value="Admin">Admin</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <a href="account.php?id=2" class="btn btn-warning">Update</a>
-                                    </td>
-                                    <td>
-                                        <a href="account.php?id=2" class="btn btn-danger">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr data-id="3">
-                                    <td>
-                                        <input type="number" value="3" readonly name="id-3">
-                                    </td>
-                                    <td>
-                                        <input type="text" value="lenin" name="username-3" class="text-center">
-                                    </td>
-                                    <td>
-                                        <input type="text" value="12345" name="password-3" class="text-center">
-                                    </td>
-                                    <td>
-                                        <select name="privilege-3">
-                                            <option value="User">User</option>
-                                            <option value="Admin">Admin</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <a href="account.php?id=3" class="btn btn-warning">Update</a>
-                                    </td>
-                                    <td>
-                                        <a href="account.php?id=3" class="btn btn-danger">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr data-id="4">
-                                    <td>
-                                        <input type="number" value="4" readonly name="id-4">
-                                    </td>
-                                    <td>
-                                        <input type="text" value="kevin" name="username-4" class="text-center">
-                                    </td>
-                                    <td>
-                                        <input type="text" value="password" name="password-4" class="text-center">
-                                    </td>
-                                    <td>
-                                        <select name="privilege-4">
-                                            <option value="User">User</option>
-                                            <option value="Admin">Admin</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <a href="account.php?id=4" class="btn btn-warning">Update</a>
-                                    </td>
-                                    <td>
-                                        <a href="account.php?id=4" class="btn btn-danger">Delete</a>
-                                    </td>
-                                </tr>
+                                <?php foreach ($accData as $item): ?>
+                                    <tr data-id="<?php echo $item['id'] ?>">
+                                        <td>
+                                            <input type="number" value="<?php echo $item['id'] ?>" readonly
+                                                name="id-<?php echo $item['id'] ?>">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="<?php echo $item['username'] ?>"
+                                                name="username-<?php echo $item['id'] ?>" class="text-center">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="<?php echo $item['password'] ?>"
+                                                name="password-<?php echo $item['id'] ?>" class="text-center">
+                                        </td>
+                                        <td>
+                                            <select name="privilege-<?php echo $item['id'] ?>">
+                                                <option value="<?php echo $item['privilege'] ?>" selected>
+                                                    <?php echo $item['privilege'] ? 'Admin' : 'User'; ?>
+                                                </option>
+                                                <option value="1">Admin</option>
+                                                <option value="0">User</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <button type="submit" name="account-update"
+                                                formaction="account.php?id=<?php echo $item['id'] ?>"
+                                                class="btn btn-warning">Update</button>
+                                        </td>
+                                        <td>
+                                            <button type="submit" name="account-delete"
+                                                formaction="account.php?id=<?php echo $item['id'] ?>"
+                                                class="btn btn-danger">Delete</button>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
                             </tbody>
                         </table>
                         <button type="button" class="btn btn-secondary addItem">Add Item</button>
