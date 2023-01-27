@@ -42,7 +42,16 @@
     <header id="header">
         <div class="topnav d-flex justify-content-end px-4 py-1">
             <div class="font-size-14">
-                <a href="./login.php" class="px-3 border-start text-dark">Login</a>
+                <a href="./login.php" class="px-3 border-start text-dark">
+                    <?php if (isset($_SESSION['logged']) && $_SESSION['logged'] == true) {
+                        echo $acc->getAccount($_COOKIE['user_id'])['username'];
+                    } else {
+                        echo "Login";
+                    } ?>
+                    <img src="<?php echo $acc->getAccount($_COOKIE['user_id'], 'user')['avatar'] ?>" alt="avatar"
+                        class="rounded-circle" style="width: 20px;height: 20px;" />
+                </a>
+                <a href="./register.php" class="px-3 border-start text-dark">Register</a>
                 <a href="./account.php" class="px-3 border-start text-dark">Account</a>
                 <a href="./manage.php" class="px-3 border-start text-dark">Manage</a>
             </div>

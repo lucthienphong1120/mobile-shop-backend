@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 24, 2023 lúc 05:46 PM
+-- Thời gian đã tạo: Th1 27, 2023 lúc 11:36 AM
 -- Phiên bản máy phục vụ: 10.4.27-MariaDB
--- Phiên bản PHP: 8.0.25
+-- Phiên bản PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -143,10 +143,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `fullname`, `phone`, `avatar`, `city`, `gender`, `address`, `money`) VALUES
-(1, 'admin', '0999912345', NULL, 'VN', 0, NULL, 99999.99),
-(2, 'david', '0828382237', NULL, 'US', 0, NULL, 50.00),
-(3, 'lenin', '0723923232', NULL, 'UK', 1, NULL, 100.00),
-(4, 'kevin', '0932733612', NULL, 'FR', 0, NULL, 10.00);
+(1, 'admin', '0999912345', 'https://www.shareicon.net/data/128x128/2016/05/26/771187_man_512x512.png', 'VN', 0, NULL, 99999.99),
+(2, 'david', '0828382237', 'https://www.shareicon.net/data/128x128/2016/05/26/771188_man_512x512.png', 'US', 0, NULL, 50.00),
+(3, 'lenin', '0723923232', 'https://www.shareicon.net/data/128x128/2016/05/26/771186_people_512x512.png', 'UK', 1, NULL, 100.00),
+(4, 'kevin', '0932733612', 'https://www.shareicon.net/data/128x128/2016/05/26/771187_man_512x512.png', 'FR', 0, NULL, 10.00);
 
 --
 -- Chỉ mục cho các bảng đã đổ

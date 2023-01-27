@@ -4,19 +4,25 @@
         <!-- log in -->
         <form method="POST" class="form" id="sign-in">
             <?php if (isset($_SESSION) && $_SESSION['logged'] == true) { ?>
-                <h3 class="heading">
+                <h3>
                     Welcome back,
                     <span>
                         <?php echo $acc->getAccount($_COOKIE['user_id'])['username'] ?>!
                     </span>
                 </h3>
-                <p class="desc">
-                    You are logged in as
-                    <span>
-                        <?php echo $_COOKIE['user_type'] ? 'Administrator' : 'User' ?>.
+                <img src="<?php echo $acc->getAccount($_COOKIE['user_id'], 'user')['avatar'] ?>" alt="avatar"
+                    class="rounded-circle my-3" style="width: 120px;height: 120px;" />
+                <h5 class="mb-2">
+                    <strong>
+                        <?php echo $acc->getAccount($_COOKIE['user_id'], 'user')['fullname'] ?>
+                    </strong>
+                </h5>
+                <p class="text-muted">
+                    <?php echo $_COOKIE['user_type'] ? 'Web designer' : 'Customer' ?>
+                    <span class="badge bg-primary">
+                        <?php echo $_COOKIE['user_type'] ? 'Administrator' : 'User' ?>
                     </span>
                 </p>
-                <img src="<?php echo $acc->getAccount($_COOKIE['user_id'], 'user')['avatar'] ?>" alt="avatar">
                 <button class="form-submit" type="submit" name="logout-submit">Log out</button>
             <?php } else { ?>
                 <h3 class="heading">Sign in</h3>

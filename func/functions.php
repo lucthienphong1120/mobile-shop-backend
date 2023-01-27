@@ -3,9 +3,6 @@
 if (!isset($_SESSION)) {
     session_start();
 }
-var_dump($_SESSION);
-echo "<br>";
-var_dump($_COOKIE);
 
 // require MySQL Connection
 require('func/DBConnect.php');
