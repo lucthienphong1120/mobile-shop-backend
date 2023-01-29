@@ -11,8 +11,6 @@ if (!isset($_COOKIE['user_id']) && !isset($_COOKIE['user_type'])) {
     setcookie('user_type', '0', time() + (86400 * 30), "/"); // 86400 = 1 day
 }
 
-var_dump($_SESSION['logged']);
-
 // require MySQL Connection
 require('func/DBConnect.php');
 
