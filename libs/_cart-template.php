@@ -1,12 +1,14 @@
 <!-- Shopping cart section  -->
 <section id="cart" class="py-3 mb-5">
     <div class="container">
-        <h5 class="font-size-20">Shopping Cart</h5>
+        <h5 class="font-size-20">
+            Shopping Cart <span>(<?php echo $acc->getAccount($_COOKIE['user_id'], 'user')['fullname'] ?>)</span>
+        </h5>
         <!--  shopping cart items -->
         <div class="row">
             <div class="col-sm-9">
                 <?php
-                $products = $product->getData('cart');
+                $products = $cart->getCart($_COOKIE['user_id'] ?? 0);
                 $subTotal = [];
                 foreach ($products as $productItems):
                     $item = $product->getProduct($productItems['item_id']);
@@ -14,14 +16,15 @@
                     <!-- cart item -->
                     <div class="row border-top py-3 mt-3">
                         <div class="col-sm-2">
-                            <img src="<?php echo $item['image']; ?>" style="height: 120px;"
-                                alt="cart1" class="img-fluid">
+                            <img src="<?php echo $item['image']; ?>" style="height: 120px;" alt="cart1" class="img-fluid">
                         </div>
                         <div class="col-sm-8">
                             <h5 class="font-size-20">
                                 <?php echo $item['name']; ?>
                             </h5>
-                            <small>by <?php echo $manage->getBrand($item['brand'])['brand']; ?></small>
+                            <small>by
+                                <?php echo $manage->getBrand($item['brand'])['brand']; ?>
+                            </small>
                             <!-- product rating -->
                             <div class="d-flex">
                                 <div class="rating text-warning font-size-12">
@@ -81,7 +84,9 @@
                     </h6>
                     <div class="border-top py-4">
                         <h5 class="font-size-20">
-                            <p>Subtotal (<?php echo isset($subTotal) ? count($subTotal) : 0; ?> item) :</p>
+                            <p>Subtotal (
+                                <?php echo isset($subTotal) ? count($subTotal) : 0; ?> item) :
+                            </p>
                             <p class="text-danger">
                                 <span>$</span>
                                 <span id="deal-price">

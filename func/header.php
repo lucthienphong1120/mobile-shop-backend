@@ -43,13 +43,13 @@
         <div class="topnav d-flex justify-content-end px-4 py-1">
             <div class="font-size-14">
                 <a href="./login.php" class="px-3 border-start text-dark">
-                    <?php if (isset($_SESSION['logged']) && $_SESSION['logged'] == true) {
-                        echo $acc->getAccount($_COOKIE['user_id'])['username'];
-                    } else {
+                    <?php if ($_SESSION['logged'] == true) {
+                        echo $acc->getAccount($_COOKIE['user_id'])['username']; ?>
+                        <img src="<?php echo $acc->getAccount($_COOKIE['user_id'], 'user')['avatar'] ?>" alt="avatar"
+                            class="rounded-circle" style="width: 18px;height: 18px;" />
+                    <?php } else {
                         echo "Login";
                     } ?>
-                    <img src="<?php echo $acc->getAccount($_COOKIE['user_id'], 'user')['avatar'] ?>" alt="avatar"
-                        class="rounded-circle" style="width: 20px;height: 20px;" />
                 </a>
                 <a href="./register.php" class="px-3 border-start text-dark">Register</a>
                 <a href="./account.php" class="px-3 border-start text-dark">Account</a>
@@ -58,7 +58,7 @@
         </div>
 
         <!-- Primary Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark color-second-bg">
+        <nav class="navbar navbar-expand-lg px-3 navbar-dark color-second-bg">
             <img src="./assets/phone.png" class="logo">
             <a class="navbar-brand" href="./index.php">Mobile Shop</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -95,7 +95,7 @@
                             <i class="fas fa-shopping-cart" aria-hidden="true"></i>
                         </span>
                         <span class="px-3 py-2 font-size-14 rounded-pill text-dark bg-light">
-                            <?php echo count($product->getData('cart')); ?>
+                            <?php echo count($cart->getCart($_COOKIE['user_id'] ?? 0)); ?>
                         </span>
                     </a>
                 </form>

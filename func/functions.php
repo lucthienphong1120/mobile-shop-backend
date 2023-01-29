@@ -3,6 +3,15 @@
 if (!isset($_SESSION)) {
     session_start();
 }
+if (!isset($_SESSION['logged'])) {
+    $_SESSION['logged'] = false;
+}
+if (!isset($_COOKIE['user_id']) && !isset($_COOKIE['user_type'])) {
+    setcookie('user_id', '0', time() + (86400 * 30), "/"); // 86400 = 1 day
+    setcookie('user_type', '0', time() + (86400 * 30), "/"); // 86400 = 1 day
+}
+
+var_dump($_SESSION['logged']);
 
 // require MySQL Connection
 require('func/DBConnect.php');
@@ -93,6 +102,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($_POST['login-submit'])) {
         // call method login
         $acc->login($_POST['username'], $_POST['password']);
+    }
+}
+// request method post
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    if (isset($_POST['logout-submit'])) {
+        // call method logout
+        $acc->logout();
     }
 }
 // request method post

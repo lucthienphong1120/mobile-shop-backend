@@ -1,5 +1,8 @@
 <!-- start #account -->
 <section id="account" class="py-3">
+    <?php if ($_SESSION['logged'] == false) {
+        header("Location: login.php");
+    } ?>
     <div class="container-xxl">
         <div class="row">
             <div class="col-3">

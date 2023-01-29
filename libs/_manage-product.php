@@ -1,5 +1,8 @@
 <!-- start #manage -->
 <section id="manage-product" class="py-3">
+    <?php if ($_SESSION['logged'] == false) {
+        header("Location: login.php");
+    } ?>
     <div class="container">
         <form method="POST" id="manage-product" enctype="multipart/form-data">
             <div class="form-group">

@@ -4,7 +4,9 @@ In this complete E-commerce Website, We will take a look at how to create Mobile
 
 ## Setup database
 
-Goto [/database/DBConnect.php line 7](https://github.com/lucthienphong1120/mobile-shop-backend/blob/main/database/DBConnect.php#L7), change the follow code:
+Firstly, import the database from [mobileshop.sql](./mobileshop.sql)
+
+Next, goto [/func/DBConnect.php line 6](./func/DBConnect.php#L7), change the follow information:
 
 ```php
 protected $host = 'localhost';
@@ -13,20 +15,20 @@ protected $password = '';
 protected $database = 'mobileshop';
 ```
 
-## Demo static page
+## Demo static pages
 
-https://www.ltp110.tk/mobile-shop-database/index.html
-
-https://www.ltp110.tk/mobile-shop-database/cart.html
-
-https://www.ltp110.tk/mobile-shop-database/product.html
++ Homepage: https://www.ltp110.tk/mobile-shop-database/index.html
++ Cart user=guest: https://www.ltp110.tk/mobile-shop-database/cart.html
++ Product id=1: https://www.ltp110.tk/mobile-shop-database/product.html
++ Login: https://www.ltp110.tk/mobile-shop-database/login.html
++ Register:  https://www.ltp110.tk/mobile-shop-database/register.html
++ Account role=admin: https://www.ltp110.tk/mobile-shop-database/account.html
++ Manage role=admin: https://www.ltp110.tk/mobile-shop-database/manage.html
 
 # Dynamic with PHP
 
-Make sure you have installed xampp and turned on apache and mysql
-
-Clone the repository into C:/xampp/htdocs/
-
-Change the configuration at /database/DBConnect.php
-
-Open your browser at `http://localhost:<port>/<repository_name>/index.php`
+1. Make sure you have installed Xampp and turned on apache and mysql
+2. **Fork** the project and Clone it into C:/xampp/htdocs/
+3. Change the configuration at [Setup database](#setup-database)
+4. Open your browser at `http://localhost:<port>/<repository_name>/index.php`
+5. Leave a **Star** for this project if you feel useful, thank you
