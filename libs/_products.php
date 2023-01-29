@@ -11,14 +11,16 @@ foreach ($product->getData() as $item):
                         <img src="<?php echo $item['image']; ?>" alt="product" class="img-fluid">
                         <div class="pt-4 font-size-16">
                             <div class="col">
-                                <button type="submit" class="btn btn-danger form-control" onclick="alert('This is demo only')">Proceed to Buy</button>
+                                <button type="submit" class="btn btn-danger form-control"
+                                    onclick="alert('This is demo only')">Proceed to Buy</button>
                             </div>
                             <div class="col">
                                 <form method="POST">
                                     <input type="hidden" name="item_id" value="<?php echo $item['id']; ?>">
-                                    <input type="hidden" name="user_id" value="<?php echo 1; ?>">
+                                    <input type="hidden" name="user_id"
+                                        value="<?php echo $_COOKIE['user_id'] ?? 0 ?>">
                                     <?php
-                                    if (in_array($item['id'], $cart->getCartId($product->getData('cart')) ?? [])) {
+                                    if (in_array($item['id'], $cart->getCartId($cart->getCart($_COOKIE['user_id'] ?? 0)) ?? [])) {
                                         echo '<button type="submit" disabled class="btn btn-success form-control">In the Cart</button>';
                                     } else {
                                         echo '<button type="submit" name="buy_product_submit" class="btn btn-warning form-control">Add to Cart</button>';
@@ -29,8 +31,12 @@ foreach ($product->getData() as $item):
                         </div>
                     </div>
                     <div class="col-sm-6 py-5">
-                        <h5 class="font-size-20"><?php echo $item['name']; ?></h5>
-                        <small>by <?php echo $manage->getBrand($item['brand'])['brand']; ?></small>
+                        <h5 class="font-size-20">
+                            <?php echo $item['name']; ?>
+                        </h5>
+                        <small>by
+                            <?php echo $manage->getBrand($item['brand'])['brand']; ?>
+                        </small>
                         <div class="d-flex">
                             <div class="rating text-warning font-size-12">
                                 <span><i class="fas fa-star"></i></span>
@@ -121,8 +127,9 @@ foreach ($product->getData() as $item):
                                     <div class="px-4 d-flex">
                                         <button class="qty-up border bg-light w-25" data-id="pro1"><i
                                                 class="fas fa-angle-up"></i></button>
-                                        <input type="text" data-id="pro1" class="qty_input text-center border px-2 w-50 bg-light" disabled
-                                            value="1" placeholder="1">
+                                        <input type="text" data-id="pro1"
+                                            class="qty_input text-center border px-2 w-50 bg-light" disabled value="1"
+                                            placeholder="1">
                                         <button data-id="pro1" class="qty-down border bg-light w-25"><i
                                                 class="fas fa-angle-down"></i></button>
                                     </div>

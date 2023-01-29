@@ -1,7 +1,9 @@
 <!-- Shopping cart section  -->
 <section id="cart" class="py-3 mb-5">
     <div class="container">
-        <h5 class="font-size-20">Shopping Cart</h5>
+        <h5 class="font-size-20">
+            Shopping Cart <span>(<?php echo $acc->getAccount($_COOKIE['user_id'], 'user')['fullname'] ?>)</span>
+        </h5>
         <!--  shopping cart items -->
         <div class="row">
             <div class="col-sm-9">

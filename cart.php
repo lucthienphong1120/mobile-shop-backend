@@ -7,7 +7,7 @@ include('func/header.php');
 <?php
 
 /*  include cart items if it is not empty */
-count($product->getData('cart')) ? include('libs/_cart-template.php') : include('libs/_cart-notFound.php');
+count($cart->getCart($_COOKIE['user_id'] ?? 0)) ? include('libs/_cart-template.php') : include('libs/_cart-notFound.php');
 /*  include cart items if it is not empty */
 
 /*  include top sale section */

@@ -69,6 +69,18 @@ class Account
         }
     }
 
+    // handle user logout
+    public function logout()
+    {
+        if ($_SESSION['logged'] == true) {
+            $_SESSION['logged'] = false;
+            setcookie('user_id', '0', time() + (86400 * 30), "/"); // 86400 = 1 day
+            setcookie('user_type', '0', time() + (86400 * 30), "/"); // 86400 = 1 day
+            echo "<script>alert('Logout success');</script>";
+            return true;
+        }
+    }
+
     // handle user registration
     public function register(
         $fullname = null,

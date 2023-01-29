@@ -3,7 +3,7 @@
     <div class="main py-3">
         <!-- log in -->
         <form method="POST" class="form" id="sign-in">
-            <?php if (isset($_SESSION) && $_SESSION['logged'] == true) { ?>
+            <?php if ($_SESSION['logged'] == true) { ?>
                 <h3>
                     Welcome back,
                     <span>

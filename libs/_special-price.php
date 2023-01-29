@@ -1,13 +1,13 @@
 <!-- Special Price -->
 <?php
 $brand = array_map(function ($pro) {
-    return $pro['brand']; 
+    return $pro['brand'];
 }, $productData);
 $unique = array_unique($brand);
 sort($unique);
 shuffle($productData);
 
-$in_cart = $cart->getCartId($product->getData('cart'));
+$in_cart = $cart->getCartId($cart->getCart($_COOKIE['user_id'] ?? 0));
 
 ?>
 <section id="special-price">
@@ -28,8 +28,7 @@ $in_cart = $cart->getCartId($product->getData('cart'));
                     <div class="item py-2" style="width: 200px;">
                         <div class="product">
                             <a href="<?php printf('%s?id=%s', 'product.php', $item['id']); ?>"><img
-                                    src="<?php echo $item['image']; ?>" alt="product1"
-                                    class="img-fluid"></a>
+                                    src="<?php echo $item['image']; ?>" alt="product1" class="img-fluid"></a>
                             <div class="text-center">
                                 <h6>
                                     <?php echo $item['name']; ?>
@@ -42,11 +41,14 @@ $in_cart = $cart->getCartId($product->getData('cart'));
                                     <span><i class="far fa-star"></i></span>
                                 </div>
                                 <div class="price py-2">
-                                    <span>$<?php echo $item['price'] ?? 0 ?></span>
+                                    <span>$
+                                        <?php echo $item['price'] ?? 0 ?>
+                                    </span>
                                 </div>
                                 <form method="POST">
                                     <input type="hidden" name="item_id" value="<?php echo $item['id']; ?>">
-                                    <input type="hidden" name="user_id" value="<?php echo 1; ?>">
+                                    <input type="hidden" name="user_id"
+                                        value="<?php echo $_COOKIE['user_id'] ?? 0 ?>">
                                     <?php
                                     if (in_array($item['id'], $in_cart ?? [])) {
                                         echo '<button type="submit" disabled class="btn btn-success font-size-12">In the Cart</button>';
