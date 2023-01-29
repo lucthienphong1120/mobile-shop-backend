@@ -6,7 +6,7 @@ In this complete E-commerce Website, We will take a look at how to create Mobile
 
 Firstly, import the database from [mobileshop.sql](./mobileshop.sql)
 
-Next, goto [/func/DBConnect.php line 6](./func/DBConnect.php#L7), change the follow information:
+Next, goto [/func/DBConnect.php line 6](./func/DBConnect.php#L6), change the follow information:
 
 ```php
 protected $host = 'localhost';
@@ -28,7 +28,7 @@ protected $database = 'mobileshop';
 # Dynamic with PHP
 
 1. Make sure you have installed Xampp and turned on apache and mysql
-2. **Fork** the project and Clone it into C:/xampp/htdocs/
+2. *Fork* the project and *Clone* it into C:/xampp/htdocs/
 3. Change the configuration at [Setup database](#setup-database)
 4. Open your browser at `http://localhost:<port>/<repository_name>/index.php`
-5. Leave a **Star** for this project if you feel useful, thank you
+5. Leave a *Star* for this project if you feel useful, thank you
