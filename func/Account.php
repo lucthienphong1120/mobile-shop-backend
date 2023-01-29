@@ -60,7 +60,7 @@ class Account
                 $_SESSION['logged'] = true;
                 setcookie('user_id', $row['id'], time() + (86400 * 1), "/"); // 86400 = 1 day
                 setcookie('user_type', $row['privilege'], time() + (86400 * 1), "/"); // 86400 = 1 day
-                echo "<script>alert('Login success');</script>";
+                header('Location: ' . $_SERVER['REQUEST_URI']);
                 return true;
             } else {
                 echo "<script>alert('Login fail');</script>";
@@ -76,7 +76,7 @@ class Account
             $_SESSION['logged'] = false;
             setcookie('user_id', '0', time() + (86400 * 30), "/"); // 86400 = 1 day
             setcookie('user_type', '0', time() + (86400 * 30), "/"); // 86400 = 1 day
-            echo "<script>alert('Logout success');</script>";
+            header('Location: ' . $_SERVER['REQUEST_URI']);
             return true;
         }
     }
@@ -116,7 +116,7 @@ class Account
             $resultAcc = $this->db->con->query($sqlAccount);
             $resultUser = $this->db->con->query($sqlUser);
             if ($resultAcc && $resultUser) {
-                echo "<script>alert('Register success');</script>";
+                header('Location: ' . $_SERVER['REQUEST_URI']);
                 return true;
             } else if ($resultUser) {
                 echo "<script>alert('Register Account fail');</script>";
