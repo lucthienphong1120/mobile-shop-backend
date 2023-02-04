@@ -2,7 +2,7 @@
 <!-- !start #main-site -->
 
 <!-- start #footer -->
-<footer id="footer" class="bg-dark text-white py-5">
+<footer id="footer" class="bg-black text-white py-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-12">
@@ -42,8 +42,8 @@
         </div>
     </div>
 </footer>
-<div class="copyright text-center bg-dark text-white py-2">
-    <p class="font-size-14">&copy; Copyrights 2022. Desing By <a
+<div class="copyright text-center py-2">
+    <p class="font-size-14 my-0">&copy; Copyrights 2022. Desing By <a
             href="https://www.facebook.com/profile.php?id=100045406261491" class="color-second">LTP</a></p>
 </div>
 <!-- !start #footer -->
@@ -68,6 +68,8 @@
 
 <!-- Custom Javascript -->
 <script src="index.js"></script>
+    <script src="switch.js"></script>
+<script src="switch.js"></script>
 
 </body>
 

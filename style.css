@@ -15,6 +15,10 @@ html {
     scroll-behavior: smooth;
 }
 
+#main-site {
+    min-height: 300px;
+}
+
 a {
     text-decoration: none;
 }
@@ -132,6 +136,38 @@ a {
     padding: 10px;
 }
 
+#formSwitch {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin: 0 !important;
+    border-radius: 5px;
+}
+
+#formSwitch i {
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+}
+
+#formSwitch label {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 !important;
+}
+
+#formSwitch input {
+    display: none;
+}
+
 .logo {
     width: 30px;
     height: 30px;
@@ -153,6 +189,7 @@ a {
 
 .form {
     width: auto;
+    color: #333;
 }
 
 .form .desc {
@@ -189,6 +226,15 @@ a {
 .table-data select {
     width: 100px !important;
     text-align: center;
+}
+
+.table-dark input, select {
+    color: #fff !important;
+}
+
+.table-dark option {
+    color: #fff;
+    background: #333;
 }
 
 .preview-image {

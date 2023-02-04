@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 29, 2023 lúc 09:32 AM
+-- Thời gian đã tạo: Th2 04, 2023 lúc 07:38 AM
 -- Phiên bản máy phục vụ: 10.4.27-MariaDB
--- Phiên bản PHP: 8.2.0
+-- Phiên bản PHP: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -49,14 +49,44 @@ INSERT INTO `account` (`id`, `username`, `password`, `email`, `privilege`) VALUE
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `bill`
+--
+
+CREATE TABLE `bill` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `user_id` int(11) UNSIGNED NOT NULL,
+  `shipper_id` int(11) UNSIGNED NOT NULL,
+  `total_sum` double(10,2) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `bill`
+--
+
+INSERT INTO `bill` (`id`, `user_id`, `shipper_id`, `total_sum`) VALUES
+(1, 1, 1, 152.00),
+(2, 1, 2, 304.00);
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `cart`
 --
 
 CREATE TABLE `cart` (
   `id` int(10) UNSIGNED NOT NULL,
   `item_id` int(10) UNSIGNED NOT NULL,
-  `user_id` int(10) UNSIGNED NOT NULL
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `quantity` int(10) UNSIGNED NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `cart`
+--
+
+INSERT INTO `cart` (`id`, `item_id`, `user_id`, `quantity`) VALUES
+(0, 12, 1, 1),
+(1, 5, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -92,7 +122,7 @@ CREATE TABLE `product` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(100) NOT NULL,
   `brand` varchar(30) NOT NULL,
-  `price` double(10,2) NOT NULL,
+  `price` double(10,2) UNSIGNED NOT NULL,
   `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -103,17 +133,43 @@ CREATE TABLE `product` (
 INSERT INTO `product` (`id`, `name`, `brand`, `price`, `image`) VALUES
 (1, 'Samsung Galaxy 10', '1', 152.00, './assets/products/1.png'),
 (2, 'Redmi Note 7', '2', 122.00, './assets/products/2.png'),
-(3, 'Redmi Note 6', '2', 122.00, './assets/products/3.png'),
-(4, 'Redmi Note 5', '2', 122.00, './assets/products/4.png'),
-(5, 'Redmi Note 4', '2', 122.00, './assets/products/5.png'),
-(6, 'Redmi Note 8', '2', 122.00, './assets/products/6.png'),
-(7, 'Redmi Note 9', '2', 122.00, './assets/products/8.png'),
-(8, 'Redmi Note', '2', 122.00, './assets/products/10.png'),
-(9, 'Samsung Galaxy S6', '1', 152.00, './assets/products/11.png'),
-(10, 'Samsung Galaxy S7', '1', 152.00, './assets/products/12.png'),
-(11, 'Apple iPhone 5', '3', 152.00, './assets/products/13.png'),
-(12, 'Apple iPhone 6', '3', 152.00, './assets/products/14.png'),
-(13, 'Apple iPhone 7', '3', 152.00, './assets/products/15.png');
+(3, 'Redmi Note 6', '2', 112.00, './assets/products/3.png'),
+(4, 'Redmi Note 5', '2', 102.00, './assets/products/4.png'),
+(5, 'Redmi Note 4', '2', 82.00, './assets/products/5.png'),
+(6, 'Redmi Note 8', '2', 132.00, './assets/products/6.png'),
+(7, 'Redmi Note 9', '2', 142.00, './assets/products/8.png'),
+(8, 'Samsung Galaxy A23', '1', 122.00, './assets/products/10.png'),
+(9, 'Samsung Galaxy S6', '1', 122.00, './assets/products/11.png'),
+(10, 'Samsung Galaxy S7', '1', 132.00, './assets/products/12.png'),
+(11, 'Apple iPhone X', '3', 82.00, './assets/products/13.png'),
+(12, 'iPhone 13 ProMax', '3', 142.00, './assets/products/14.png'),
+(13, 'iPhone 12 Pro', '3', 122.00, './assets/products/15.png');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `shipper`
+--
+
+CREATE TABLE `shipper` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `age` int(10) UNSIGNED DEFAULT NULL,
+  `area` varchar(30) NOT NULL,
+  `cost` double(10,2) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `shipper`
+--
+
+INSERT INTO `shipper` (`id`, `name`, `age`, `area`, `cost`) VALUES
+(1, 'Hoang Duc', 18, 'Ha Noi', 1.00),
+(2, 'Mr Dinh', 20, 'Da Nang', 2.00),
+(3, 'Ky Anh', 20, 'Ho Chi Minh', 1.50),
+(4, 'Ngoc Anh', 19, 'Binh Duong', 0.50),
+(5, 'Khanh Huyen', 21, 'Lao Cai', 3.00),
+(6, 'Nam Hai', 20, 'Vung Tau', 2.50);
 
 -- --------------------------------------------------------
 
@@ -154,6 +210,12 @@ ALTER TABLE `account`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Chỉ mục cho bảng `bill`
+--
+ALTER TABLE `bill`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `cart`
 --
 ALTER TABLE `cart`
@@ -169,6 +231,12 @@ ALTER TABLE `manufacturer`
 -- Chỉ mục cho bảng `product`
 --
 ALTER TABLE `product`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `shipper`
+--
+ALTER TABLE `shipper`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -188,10 +256,16 @@ ALTER TABLE `account`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
+-- AUTO_INCREMENT cho bảng `bill`
+--
+ALTER TABLE `bill`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT cho bảng `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT cho bảng `product`
