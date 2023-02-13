@@ -23,6 +23,13 @@
                         <?php echo $_COOKIE['user_type'] ? 'Administrator' : 'User' ?>
                     </span>
                 </p>
+                <p class="mb-2">
+                    <span>Money: </span>
+                    <strong class="text-danger">
+                        $
+                        <?php echo $acc->getAccount($_COOKIE['user_id'], 'user')['money'] ?>
+                    </strong>
+                </p>
                 <button class="form-submit" type="submit" name="logout-submit">Log out</button>
             <?php } else { ?>
                 <h3 class="heading">Sign in</h3>

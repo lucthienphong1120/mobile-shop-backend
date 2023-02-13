@@ -15,6 +15,10 @@ html {
     scroll-behavior: smooth;
 }
 
+#main-site {
+    min-height: 300px;
+}
+
 a {
     text-decoration: none;
 }
@@ -116,7 +120,7 @@ a {
 
 .scroll-up {
     position: fixed;
-    bottom: 30px;
+    bottom: 90px;
     right: 20px;
     cursor: pointer;
     background: rgba(0, 0, 0, 0.5);
@@ -124,12 +128,46 @@ a {
     height: 50px;
     text-align: center;
     border-radius: 5px;
+    z-index: 999;
 }
 
 .scroll-up i {
     color: white;
     font-size: 30px;
     padding: 10px;
+}
+
+#formSwitch {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin: 0 !important;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+#formSwitch i {
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+}
+
+#formSwitch label {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 !important;
+}
+
+#formSwitch input {
+    display: none;
 }
 
 .logo {
@@ -151,8 +189,30 @@ a {
     -webkit-box-orient: vertical;
 }
 
+#banner-area img {
+    height: 500px;
+    object-fit: cover;
+    object-position: top center;
+}
+
+#product img {
+    width: 546px;
+    height: 546px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#footer {
+    height: 230px;
+}
+
+.copyright {
+    height: 38px;
+}
+
 .form {
     width: auto;
+    color: #333;
 }
 
 .form .desc {
@@ -176,6 +236,10 @@ a {
     padding: 5px 10px;
 }
 
+.text-light input, .text-light button[type="button"] {
+    color: #fff;
+}
+
 .table-data input,
 .table-data select {
     padding: 5px 0px;
@@ -189,6 +253,15 @@ a {
 .table-data select {
     width: 100px !important;
     text-align: center;
+}
+
+.table-dark input, .table-dark select {
+    color: #fff !important;
+}
+
+.table-dark option {
+    color: #fff;
+    background: #333;
 }
 
 .preview-image {

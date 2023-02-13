@@ -2,7 +2,15 @@
 <section id="cart" class="py-3 mb-5">
     <div class="container">
         <h5 class="font-size-20">
-            Shopping Cart <span>(<?php echo $acc->getAccount($_COOKIE['user_id'], 'user')['fullname'] ?>)</span>
+            Shopping Cart <span>
+                (<?php
+                if ($_SESSION['logged'] == true) {
+                    echo $acc->getAccount($_SESSION['user_id'], 'user')['fullname'];
+                } else {
+                    echo 'Guest';
+                }
+                ?>)
+            </span>
         </h5>
         <!--  shopping cart items -->
         <div class="row">
@@ -34,7 +42,7 @@
                                     <span><i class="fas fa-star"></i></span>
                                     <span><i class="far fa-star"></i></span>
                                 </div>
-                                <a href="#" class="px-2  font-size-14">20,534 ratings</a>
+                                <a href="#" class="px-2 font-size-14">20,534 ratings</a>
                             </div>
                             <!--  !product rating-->
 

@@ -6,7 +6,7 @@ if (!isset($_SESSION)) {
 if (!isset($_SESSION['logged'])) {
     $_SESSION['logged'] = false;
 }
-if (!isset($_COOKIE['user_id']) && !isset($_COOKIE['user_type'])) {
+if ($_SESSION['logged'] == false) {
     setcookie('user_id', '0', time() + (86400 * 30), "/"); // 86400 = 1 day
     setcookie('user_type', '0', time() + (86400 * 30), "/"); // 86400 = 1 day
 }

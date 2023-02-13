@@ -19,12 +19,19 @@
     <!-- font awesome icons -->
     <script src="https://kit.fontawesome.com/7860568151.js" crossorigin="anonymous"></script>
     <!-- form validate -->
-    <link rel="stylesheet" href="https://ltp110.tk/form-validate/css/style.css">
+    <link rel="stylesheet" href="https://ltp.crfnetwork.cyou/form-validate/css/style.css">
     <!-- Custom CSS file -->
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+    <div class="form-check form-switch ms-auto mt-3 me-3" id="formSwitch">
+        <label class="form-check-label ms-3" for="inputSwicher">
+            <i class="fas fa-sun light-mode"></i>
+            <i class="fas fa-moon dark-mode d-none"></i>
+        </label>
+        <input class="form-check-input" type="checkbox" id="inputSwicher" />
+    </div>
     <span id="top"></span>
     <a class="scroll-up" href="#top"><i class="fas fa-chevron-up"></i></a>
     <!-- start #header -->
@@ -70,11 +77,11 @@
                     </li>
                 </ul>
                 <form action="#" class="font-size-12">
-                    <a href="./cart.html" class="d-flex align-items-center rounded-pill color-primary-bg">
+                    <a href="./cart.html" class="d-flex align-items-center rounded-pill bg-primary">
                         <span class="font-size-14 px-2 py-2 text-white">
                             <i class="fas fa-shopping-cart" aria-hidden="true"></i>
                         </span>
-                        <span class="px-3 py-2 font-size-14 rounded-pill text-dark bg-light">0</span>
+                        <div class="px-3 py-2 font-size-14 rounded-pill text-black bg-white">0</div>
                     </a>
                 </form>
             </div>
@@ -111,7 +118,7 @@
                 <div class="owl-carousel owl-theme">
                     <div class="item py-2 border rounded-2 bg-light">
                         <div class="product">
-                            <a href="#"><img src="./assets/products/2.png" alt="product1" class="img-fluid"></a>
+                            <a href="product.html"><img src="./assets/products/2.png" alt="product1" class="img-fluid"></a>
                             <div class="text-center">
                                 <h6>Samsung Galaxy 10</h6>
                                 <div class="rating text-warning font-size-12">
@@ -130,7 +137,7 @@
                     </div>
                     <div class="item py-2 border rounded-2 bg-light">
                         <div class="product">
-                            <a href="#"><img src="./assets/products/2.png" alt="product1" class="img-fluid"></a>
+                            <a href="product.html"><img src="./assets/products/2.png" alt="product1" class="img-fluid"></a>
                             <div class="text-center">
                                 <h6>Readme Note 7</h6>
                                 <div class="rating text-warning font-size-12">
@@ -149,7 +156,7 @@
                     </div>
                     <div class="item py-2 border rounded-2 bg-light">
                         <div class="product">
-                            <a href="#"><img src="./assets/products/3.png" alt="product1" class="img-fluid"></a>
+                            <a href="product.html"><img src="./assets/products/3.png" alt="product1" class="img-fluid"></a>
                             <div class="text-center">
                                 <h6>Readme Note 7</h6>
                                 <div class="rating text-warning font-size-12">
@@ -168,7 +175,7 @@
                     </div>
                     <div class="item py-2 border rounded-2 bg-light">
                         <div class="product">
-                            <a href="#"><img src="./assets/products/6.png" alt="product1" class="img-fluid"></a>
+                            <a href="product.html"><img src="./assets/products/6.png" alt="product1" class="img-fluid"></a>
                             <div class="text-center">
                                 <h6>Samsung Galaxy 10</h6>
                                 <div class="rating text-warning font-size-12">
@@ -187,7 +194,7 @@
                     </div>
                     <div class="item py-2 border rounded-2 bg-light">
                         <div class="product">
-                            <a href="#"><img src="./assets/products/1.png" alt="product1" class="img-fluid"></a>
+                            <a href="product.html"><img src="./assets/products/1.png" alt="product1" class="img-fluid"></a>
                             <div class="text-center">
                                 <h6>Readme Note 7</h6>
                                 <div class="rating text-warning font-size-12">
@@ -207,7 +214,7 @@
                     <div class="item py-2 border rounded-2 bg-light">
                         <div class="product">
                             <div class="d-flex flex-column">
-                                <a href="#"><img src="./assets/products/15.png" class="img-fluid" alt="pro1"></a>
+                                <a href="product.html"><img src="./assets/products/15.png" class="img-fluid" alt="pro1"></a>
                                 <div class="text-center">
                                     <h6>Readme Note 7</h6>
                                     <div class="rating text-warning font-size-12">
@@ -228,7 +235,7 @@
                     <div class="item py-2 border rounded-2 bg-light">
                         <div class="product">
                             <div class="d-flex flex-column">
-                                <a href="#"><img src="./assets/products/2.png" class="img-fluid" alt="pro1"></a>
+                                <a href="product.html"><img src="./assets/products/2.png" class="img-fluid" alt="pro1"></a>
                                 <div class="text-center">
                                     <h6>Readme Note 7</h6>
                                     <div class="rating text-warning font-size-12">
@@ -265,7 +272,7 @@
                     <div class="product-filter-item Apple border">
                         <div class="item py-2" style="width: 200px;">
                             <div class="product">
-                                <a href="#"><img src="./assets/products/13.png" alt="product1" class="img-fluid"></a>
+                                <a href="product.html"><img src="./assets/products/13.png" alt="product1" class="img-fluid"></a>
                                 <div class="text-center">
                                     <h6>Apple iPhone 10</h6>
                                     <div class="rating text-warning font-size-12">
@@ -286,7 +293,7 @@
                     <div class="product-filter-item Samsung border">
                         <div class="item py-2" style="width: 200px;">
                             <div class="product">
-                                <a href="#"><img src="./assets/products/11.png" alt="product1" class="img-fluid"></a>
+                                <a href="product.html"><img src="./assets/products/11.png" alt="product1" class="img-fluid"></a>
                                 <div class="text-center">
                                     <h6>Samsung Galaxy 10</h6>
                                     <div class="rating text-warning font-size-12">
@@ -307,7 +314,7 @@
                     <div class="product-filter-item Redmi border">
                         <div class="item py-2" style="width: 200px;">
                             <div class="product">
-                                <a href="#"><img src="./assets/products/3.png" alt="product1" class="img-fluid"></a>
+                                <a href="product.html"><img src="./assets/products/3.png" alt="product1" class="img-fluid"></a>
                                 <div class="text-center">
                                     <h6>Redmi Note 7 Pro</h6>
                                     <div class="rating text-warning font-size-12">
@@ -328,7 +335,7 @@
                     <div class="product-filter-item Apple border">
                         <div class="item py-2" style="width: 200px;">
                             <div class="product">
-                                <a href="#"><img src="./assets/products/14.png" alt="product1" class="img-fluid"></a>
+                                <a href="product.html"><img src="./assets/products/14.png" alt="product1" class="img-fluid"></a>
                                 <div class="text-center">
                                     <h6>Apple iPhone 10</h6>
                                     <div class="rating text-warning font-size-12">
@@ -349,7 +356,7 @@
                     <div class="product-filter-item Samsung border">
                         <div class="item py-2" style="width: 200px;">
                             <div class="product">
-                                <a href="#"><img src="./assets/products/12.png" alt="product1" class="img-fluid"></a>
+                                <a href="product.html"><img src="./assets/products/12.png" alt="product1" class="img-fluid"></a>
                                 <div class="text-center">
                                     <h6>Samsung Galaxy 10</h6>
                                     <div class="rating text-warning font-size-12">
@@ -371,7 +378,7 @@
                         <div class="item py-2" style="width: 200px;">
                             <div class="product">
                                 <div class="d-flex flex-column">
-                                    <a href="#"><img src="./assets/products/4.png" class="img-fluid" alt="pro1"></a>
+                                    <a href="product.html"><img src="./assets/products/4.png" class="img-fluid" alt="pro1"></a>
                                     <div class="text-center">
                                         <h6>Redmi Note 7 Pro</h6>
                                         <div class="rating text-warning font-size-12">
@@ -394,7 +401,7 @@
                         <div class="item py-2" style="width: 200px;">
                             <div class="product">
                                 <div class="d-flex flex-column">
-                                    <a href="#"><img src="./assets/products/5.png" class="img-fluid" alt="pro1"></a>
+                                    <a href="product.html"><img src="./assets/products/5.png" class="img-fluid" alt="pro1"></a>
                                     <div class="text-center">
                                         <h6>Redmi Note 7 Pro</h6>
                                         <div class="rating text-warning font-size-12">
@@ -417,7 +424,7 @@
                         <div class="item py-2" style="width: 200px;">
                             <div class="product">
                                 <div class="d-flex flex-column">
-                                    <a href="#"><img src="./assets/products/6.png" class="img-fluid" alt="pro1"></a>
+                                    <a href="product.html"><img src="./assets/products/6.png" class="img-fluid" alt="pro1"></a>
                                     <div class="text-center">
                                         <h6>Redmi Note 7 Pro</h6>
                                         <div class="rating text-warning font-size-12">
@@ -440,7 +447,7 @@
                         <div class="item py-2" style="width: 200px;">
                             <div class="product">
                                 <div class="d-flex flex-column">
-                                    <a href="#"><img src="./assets/products/10.png" class="img-fluid" alt="pro1"></a>
+                                    <a href="product.html"><img src="./assets/products/10.png" class="img-fluid" alt="pro1"></a>
                                     <div class="text-center">
                                         <h6>Redmi Note 7 Pro</h6>
                                         <div class="rating text-warning font-size-12">
@@ -463,7 +470,7 @@
                         <div class="item py-2" style="width: 200px;">
                             <div class="product">
                                 <div class="d-flex flex-column">
-                                    <a href="#"><img src="./assets/products/13.png" class="img-fluid" alt="pro1"></a>
+                                    <a href="product.html"><img src="./assets/products/13.png" class="img-fluid" alt="pro1"></a>
                                     <div class="text-center">
                                         <h6>Apple iPhone 10</h6>
                                         <div class="rating text-warning font-size-12">
@@ -503,7 +510,7 @@
                 <div class="owl-carousel owl-theme">
                     <div class="item py-2 border rounded-2 bg-light">
                         <div class="product">
-                            <a href="#"><img src="./assets/products/1.png" alt="product1" class="img-fluid"></a>
+                            <a href="product.html"><img src="./assets/products/1.png" alt="product1" class="img-fluid"></a>
                             <div class="text-center">
                                 <h6>Samsung Galaxy 10</h6>
                                 <div class="rating text-warning font-size-12">
@@ -522,7 +529,7 @@
                     </div>
                     <div class="item py-2 border rounded-2 bg-light">
                         <div class="product">
-                            <a href="#"><img src="./assets/products/2.png" alt="product1" class="img-fluid"></a>
+                            <a href="product.html"><img src="./assets/products/2.png" alt="product1" class="img-fluid"></a>
                             <div class="text-center">
                                 <h6>Readme Note 7</h6>
                                 <div class="rating text-warning font-size-12">
@@ -541,7 +548,7 @@
                     </div>
                     <div class="item py-2 border rounded-2 bg-light">
                         <div class="product">
-                            <a href="#"><img src="./assets/products/9.png" alt="product1" class="img-fluid"></a>
+                            <a href="product.html"><img src="./assets/products/9.png" alt="product1" class="img-fluid"></a>
                             <div class="text-center">
                                 <h6>Readme Note 7</h6>
                                 <div class="rating text-warning font-size-12">
@@ -560,7 +567,7 @@
                     </div>
                     <div class="item py-2 border rounded-2 bg-light">
                         <div class="product">
-                            <a href="#"><img src="./assets/products/6.png" alt="product1" class="img-fluid"></a>
+                            <a href="product.html"><img src="./assets/products/6.png" alt="product1" class="img-fluid"></a>
                             <div class="text-center">
                                 <h6>Samsung Galaxy 10</h6>
                                 <div class="rating text-warning font-size-12">
@@ -579,7 +586,7 @@
                     </div>
                     <div class="item py-2 border rounded-2 bg-light">
                         <div class="product">
-                            <a href="#"><img src="./assets/products/7.png" alt="product1" class="img-fluid"></a>
+                            <a href="product.html"><img src="./assets/products/7.png" alt="product1" class="img-fluid"></a>
                             <div class="text-center">
                                 <h6>Readme Note 7</h6>
                                 <div class="rating text-warning font-size-12">
@@ -599,7 +606,7 @@
                     <div class="item py-2 border rounded-2 bg-light">
                         <div class="product">
                             <div class="d-flex flex-column">
-                                <a href="#"><img src="./assets/products/10.png" class="img-fluid" alt="pro1"></a>
+                                <a href="product.html"><img src="./assets/products/10.png" class="img-fluid" alt="pro1"></a>
                                 <div class="text-center">
                                     <h6>Readme Note 7</h6>
                                     <div class="rating text-warning font-size-12">
@@ -620,7 +627,7 @@
                     <div class="item py-2 border rounded-2 bg-light">
                         <div class="product">
                             <div class="d-flex flex-column">
-                                <a href="#"><img src="./assets/products/8.png" class="img-fluid" alt="pro1"></a>
+                                <a href="product.html"><img src="./assets/products/8.png" class="img-fluid" alt="pro1"></a>
                                 <div class="text-center">
                                     <h6>Readme Note 7</h6>
                                     <div class="rating text-warning font-size-12">
@@ -650,31 +657,31 @@
                 <hr>
                 <div class="owl-carousel owl-theme">
                     <div class="item">
-                        <div class="card border-0 me-5">
-                            <h5 class="card-title font-size-16">Táo xịn tết sang - Lì xì 2023 chỉ vàng</h5>
+                        <div class="card border-1 me-5">
+                            <h5 class="card-title font-size-16 text-dark text-center mt-1">Táo xịn tết sang - Lì xì 2023 chỉ vàng</h5>
                             <img src="./assets/blog/blog1.jpg" class="card-img-top">
-                            <p class="card-text font-size-14 text-black-50 py-1">Từ ngày 16/12/-31/01 Táo xịn tết sang
+                            <p class="card-text font-size-14 text-black-50 px-2">Từ ngày 16/12/-31/01 Táo xịn tết sang
                                 giảm đến 11 triệu khi mua iPhone hoặc MacBook tại Topzone, mua iPad giảm 7 triệu, cùng
                                 nhiều khuyến mãi hấp dẫn.</p>
-                            <a href="#" class="color-second text-start">Xem ngay</a>
+                            <a href="#" class="color-second text-start ps-2 mb-2">Xem ngay</a>
                         </div>
                     </div>
                     <div class="item">
-                        <div class="card border-0 me-5">
-                            <h5 class="card-title font-size-16">GIÁNG SINH GIẢM ĐỈNH 50%</h5>
+                        <div class="card border-1 me-5">
+                            <h5 class="card-title font-size-16 text-dark text-center mt-1">GIÁNG SINH GIẢM ĐỈNH 50%</h5>
                             <img src="./assets/blog/blog2.jpg" class="card-img-top">
-                            <p class="card-text font-size-14 text-black-50 py-1">SALE SỐC HÀNG LOẠT ĐẾN 50% - DUY NHẤT
+                            <p class="card-text font-size-14 text-black-50 px-2">SALE SỐC HÀNG LOẠT ĐẾN 50% - DUY NHẤT
                                 TỪ 19 -25/12. MUA NGAY TẠI AVASPORT</p>
-                            <a href="#" class="color-second text-start">Xem ngay</a>
+                            <a href="#" class="color-second text-start ps-2 mb-2">Xem ngay</a>
                         </div>
                     </div>
                     <div class="item">
-                        <div class="card border-0 me-5">
-                            <h5 class="card-title font-size-16">Mùa giáng sinh, sinh lực phải sung giảm đến 30%</h5>
+                        <div class="card border-1 me-5">
+                            <h5 class="card-title font-size-16 text-dark text-center mt-1">Mùa giáng sinh, sinh lực phải sung giảm đến 30%</h5>
                             <img src="./assets/blog/blog3.jpg" class="card-img-top">
-                            <p class="card-text font-size-14 text-black-50 py-1">Từ ngày 01/12 đến 31/12 mua Yến sào
+                            <p class="card-text font-size-14 text-black-50 px-2">Từ ngày 01/12 đến 31/12 mua Yến sào
                                 Win'snest khuyến mãi mua 1 tặng 1. Hàng loạt sản phẩm giảm ngay từ 5% đến 30%</p>
-                            <a href="#" class="color-second text-start">Xem ngay</a>
+                            <a href="#" class="color-second text-start ps-2 mb-2">Xem ngay</a>
                         </div>
                     </div>
                 </div>
@@ -684,7 +691,7 @@
     </main>
     <!-- !start #main-site -->
     <!-- start #footer -->
-    <footer id="footer" class="bg-dark text-white py-5">
+    <footer id="footer" class="bg-black text-white py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-12">
@@ -724,9 +731,9 @@
             </div>
         </div>
     </footer>
-    <div class="copyright text-center bg-dark text-white py-2">
-        <p class="font-size-14">&copy; Copyrights 2022. Desing By <a
-                href="https://www.facebook.com/profile.php?id=100045406261491" class="color-second">LTP</a></p>
+    <div class="copyright text-center py-2">
+        <p class="font-size-14 my-0">&copy; Copyrights 2022. Desing By <a
+                href="https://www.facebook.com/profile.php?id=100045406261491" class="color-second">Chung Nguyễn</a></p>
     </div>
     <!-- !start #footer -->
 
@@ -749,7 +756,8 @@
         integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
 
     <!-- Custom Javascript -->
-    <script src="index.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.crfnetwork.cyou/js/dark-mode-switch.js"></script>
 
 </body>
 

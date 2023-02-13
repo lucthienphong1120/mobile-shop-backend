@@ -11,14 +11,13 @@ foreach ($product->getData() as $item):
                         <img src="<?php echo $item['image']; ?>" alt="product" class="img-fluid">
                         <div class="pt-4 font-size-16">
                             <div class="col">
-                                <button type="submit" class="btn btn-danger form-control"
+                                <button type="submit" class="btn btn-success form-control"
                                     onclick="alert('This is demo only')">Proceed to Buy</button>
                             </div>
                             <div class="col">
                                 <form method="POST">
                                     <input type="hidden" name="item_id" value="<?php echo $item['id']; ?>">
-                                    <input type="hidden" name="user_id"
-                                        value="<?php echo $_COOKIE['user_id'] ?? 0 ?>">
+                                    <input type="hidden" name="user_id" value="<?php echo $_COOKIE['user_id'] ?? 0 ?>">
                                     <?php
                                     if (in_array($item['id'], $cart->getCartId($cart->getCart($_COOKIE['user_id'] ?? 0)) ?? [])) {
                                         echo '<button type="submit" disabled class="btn btn-success form-control">In the Cart</button>';
@@ -45,23 +44,28 @@ foreach ($product->getData() as $item):
                                 <span><i class="fas fa-star"></i></span>
                                 <span><i class="far fa-star"></i></span>
                             </div>
-                            <a href="#" class="px-2  font-size-14">20,534 ratings | 1000+ answered questions</a>
+                            <a href="#" class="px-2 font-size-14">20,534 ratings | 1000+ answered questions</a>
                         </div>
                         <hr class="m-0">
 
                         <!--- product price -->
-                        <table class="my-3">
-                            <tr class="font-size-14">
+                        <table class="my-3 font-size-14">
+                            <tr>
                                 <td>M.R.P:</td>
                                 <td><strike>$162.00</strike></td>
                             </tr>
-                            <tr class="font-size-14">
+                            <tr>
                                 <td>Deal Price:</td>
-                                <td class="font-size-20 text-danger">$<span>
+                                <td class="font-size-20 text-danger">$
+                                    <span>
                                         <?php echo $item['price'] ?? 0; ?>
-                                    </span><small class="text-dark font-size-12">&nbsp;&nbsp;Inclusive of all taxes</small></td>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="font-size-12">&nbsp;&nbsp;Inclusive of all taxes</span>
+                                </td>
                             </tr>
-                            <tr class="font-size-14">
+                            <tr>
                                 <td>You Save:</td>
                                 <td><span class="font-size-16 text-danger">$152.00</span></td>
                             </tr>
@@ -94,7 +98,7 @@ foreach ($product->getData() as $item):
                         <!-- !policy -->
                         <hr>
                         <!-- order-details -->
-                        <div id="order-details" class="d-flex flex-column text-dark">
+                        <div id="order-details" class="d-flex flex-column">
                             <small>Delivery by : Mar 29 - Apr 1</small>
                             <small>Sold by <a href="#">Daily Electronics </a>(4.5 out of 5 | 18,198 ratings)</small>
                             <small><i class="fas fa-map-marker-alt color-primary"></i>&nbsp;&nbsp;Deliver to Customer -
@@ -128,7 +132,7 @@ foreach ($product->getData() as $item):
                                         <button class="qty-up border bg-light w-25" data-id="pro1"><i
                                                 class="fas fa-angle-up"></i></button>
                                         <input type="text" data-id="pro1"
-                                            class="qty_input text-center border px-2 w-50 bg-light" disabled value="1"
+                                            class="qty_input text-center border px-2 w-50" disabled value="1"
                                             placeholder="1">
                                         <button data-id="pro1" class="qty-down border bg-light w-25"><i
                                                 class="fas fa-angle-down"></i></button>
@@ -142,13 +146,13 @@ foreach ($product->getData() as $item):
                             <h6>Size :</h6>
                             <div class="d-flex justify-content-between w-75">
                                 <div class="border p-2">
-                                    <button class="btn p-0 font-size-14">4GB RAM</button>
+                                    <button type="button" class="btn p-0 font-size-14">4GB RAM</button>
                                 </div>
                                 <div class="border p-2">
-                                    <button class="btn p-0 font-size-14">6GB RAM</button>
+                                    <button type="button" class="btn p-0 font-size-14">6GB RAM</button>
                                 </div>
                                 <div class="border p-2">
-                                    <button class="btn p-0 font-size-14">8GB RAM</button>
+                                    <button type="button" class="btn p-0 font-size-14">8GB RAM</button>
                                 </div>
                             </div>
                         </div>

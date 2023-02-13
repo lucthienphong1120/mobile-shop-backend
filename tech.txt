@@ -1,0 +1,27 @@
+In term of FrontEnd, I will use
+	HTML
+	CSS
+	SASS
+	Javascript
+	Bootstrap 5
+	Grid System
+	Owl Carousel
+	Responsive
+	Fontawesome
+	Form validate
+	jQuery
+	Popper
+	Isotope
+	Dark mode switch
+	Evaluate and giving technical difficulties and challenges of the process of developing a mobile shop website that using (HTML, CSS, SASS, Bootstrap, JS, Jquery, Grid System, Owl Carousel, Responsive, Fontawesome, Form validate, Popper, Isotope, Dark mode) in frontend, (PHP, mariadb, Object-Oriented Database Connectivity, HTTP header manipulation, PHP Template Inheritance) in backend, (apache) as web server.
+In term of BackEnd, I will use
+	PHP
+	MariaDB
+	Object-Oriented Database Connectivity
+	HTTP header manipulation
+	PHP Template Inheritance
+In term of WebServer, I will use
+	Apache
+	PHP
+In term of Database, I will use
+	MariaDB

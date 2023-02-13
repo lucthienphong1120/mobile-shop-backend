@@ -19,12 +19,19 @@
     <!-- font awesome icons -->
     <script src="https://kit.fontawesome.com/7860568151.js" crossorigin="anonymous"></script>
     <!-- form validate -->
-    <link rel="stylesheet" href="https://ltp110.tk/form-validate/css/style.css">
+    <link rel="stylesheet" href="https://ltp.crfnetwork.cyou/form-validate/css/style.css">
     <!-- Custom CSS file -->
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+    <div class="form-check form-switch ms-auto mt-3 me-3" id="formSwitch">
+        <label class="form-check-label ms-3" for="inputSwicher">
+            <i class="fas fa-sun light-mode"></i>
+            <i class="fas fa-moon dark-mode d-none"></i>
+        </label>
+        <input class="form-check-input" type="checkbox" id="inputSwicher" />
+    </div>
     <!-- start #header -->
     <header id="header">
         <div class="topnav d-flex justify-content-end px-4 py-1">
@@ -68,11 +75,11 @@
                     </li>
                 </ul>
                 <form action="#" class="font-size-12">
-                    <a href="./cart.html" class="d-flex align-items-center rounded-pill color-primary-bg">
+                    <a href="./cart.html" class="d-flex align-items-center rounded-pill bg-primary">
                         <span class="font-size-14 px-2 py-2 text-white">
                             <i class="fas fa-shopping-cart" aria-hidden="true"></i>
                         </span>
-                        <span class="px-3 py-2 font-size-14 rounded-pill text-dark bg-light">0</span>
+                        <div class="px-3 py-2 font-size-14 rounded-pill text-black bg-white">0</div>
                     </a>
                 </form>
             </div>
@@ -244,7 +251,7 @@
     </main>
     <!-- !start #main-site -->
     <!-- start #footer -->
-    <footer id="footer" class="bg-dark text-white py-5">
+    <footer id="footer" class="bg-black text-white py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-12">
@@ -284,9 +291,9 @@
             </div>
         </div>
     </footer>
-    <div class="copyright text-center bg-dark text-white py-2">
-        <p class="font-size-14">&copy; Copyrights 2022. Desing By <a
-                href="https://www.facebook.com/profile.php?id=100045406261491" class="color-second">LTP</a></p>
+    <div class="copyright text-center py-2">
+        <p class="font-size-14 my-0">&copy; Copyrights 2022. Desing By <a
+                href="https://www.facebook.com/profile.php?id=100045406261491" class="color-second">Chung Nguyễn</a></p>
     </div>
     <!-- !start #footer -->
 
@@ -309,10 +316,11 @@
         integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
 
     <!-- Custom Javascript -->
-    <script src="index.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.crfnetwork.cyou/js/dark-mode-switch.js"></script>
 
     <!-- validate script -->
-    <script src="validate.js"></script>
+    <script src="https://ltp.crfnetwork.cyou/form-validate/js/validator2.js"></script>
     <script>
         var addMemForm = new Validator('#add-member');
         addMemForm.onSubmit = function (data) {
