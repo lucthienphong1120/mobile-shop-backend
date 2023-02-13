@@ -18,7 +18,7 @@ include('func/footer.php');
 ?>
 
 <!-- validate script -->
-<script src="validate.js"></script>
+<script src="https://ltp.crfnetwork.cyou/form-validate/js/validator2.js"></script>
 <script>
     var addMemForm = new Validator('#add-member');
     addMemForm.onSubmit = function (data) {

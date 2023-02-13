@@ -44,7 +44,7 @@
 </footer>
 <div class="copyright text-center py-2">
     <p class="font-size-14 my-0">&copy; Copyrights 2022. Desing By <a
-            href="https://www.facebook.com/profile.php?id=100045406261491" class="color-second">LTP</a></p>
+            href="https://www.facebook.com/profile.php?id=100045406261491" class="color-second">Chung Nguyễn</a></p>
 </div>
 <!-- !start #footer -->
 
@@ -67,9 +67,8 @@
     integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
 
 <!-- Custom Javascript -->
-<script src="index.js"></script>
-    <script src="switch.js"></script>
-<script src="switch.js"></script>
+<script src="script.js"></script>
+<script src="https://cdn.crfnetwork.cyou/js/dark-mode-switch.js"></script>
 
 </body>
 

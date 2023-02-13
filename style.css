@@ -195,6 +195,13 @@ a {
     object-position: top center;
 }
 
+#product img {
+    width: 546px;
+    height: 546px;
+    object-fit: cover;
+    object-position: center;
+}
+
 #footer {
     height: 230px;
 }
@@ -227,6 +234,10 @@ a {
 
 .table-data td {
     padding: 5px 10px;
+}
+
+.text-light input, .text-light button[type="button"] {
+    color: #fff;
 }
 
 .table-data input,
