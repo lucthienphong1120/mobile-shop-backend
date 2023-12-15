@@ -68,7 +68,7 @@
 
 <!-- Custom Javascript -->
 <script src="script.js"></script>
-<script src="https://cdn.crfnetwork.cyou/js/dark-mode-switch.js"></script>
+<script src="https://cdn.crfnetwork.com/js/dark-mode-switch.js"></script>
 
 </body>
 
