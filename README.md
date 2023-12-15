@@ -17,13 +17,13 @@ protected $database = 'mobileshop';
 
 ## Demo static pages
 
-+ Homepage: https://ltp.crfnetwork.cyou/mobile-shop-backend/index.html
-+ Cart user=guest: https://ltp.crfnetwork.cyou/mobile-shop-backend/cart.html
-+ Product id=1: https://ltp.crfnetwork.cyou/mobile-shop-backend/product.html
-+ Login: https://ltp.crfnetwork.cyou/mobile-shop-backend/login.html
-+ Register:  https://ltp.crfnetwork.cyou/mobile-shop-backend/register.html
-+ Account role=admin: https://ltp.crfnetwork.cyou/mobile-shop-backend/account.html
-+ Manage role=admin: https://ltp.crfnetwork.cyou/mobile-shop-backend/manage.html
++ [Homepage](./mobile-shop-backend/index.html)
++ [Cart (user=guest)](/mobile-shop-backend/cart.html)
++ [Product (id=1)](./mobile-shop-backend/product.html)
++ [Login](./mobile-shop-backend/login.html)
++ [Register](./mobile-shop-backend/register.html)
++ [Account (role=admin)](./mobile-shop-backend/account.html)
++ [Manage (role=admin)](./mobile-shop-backend/manage.html)
 
 # Dynamic with PHP
 
