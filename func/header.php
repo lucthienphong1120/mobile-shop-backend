@@ -23,7 +23,7 @@
     <script src="https://kit.fontawesome.com/7860568151.js" crossorigin="anonymous"></script>
 
     <!-- form validate -->
-    <link rel="stylesheet" href="https://ltp.crfnetwork.cyou/form-validate/css/style.css">
+    <link rel="stylesheet" href="https://ltp.crfnetwork.com/form-validate/css/style.css">
 
     <!-- Custom CSS file -->
     <link rel="stylesheet" href="./style.css">
